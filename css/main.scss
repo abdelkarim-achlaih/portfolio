@@ -107,11 +107,11 @@ header {
 	.photo {
 
 		.img-holder {
-			z-index: 150;
 			height: 100%;
 			position: relative;
 
 			.circle {
+				z-index: 150;
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -119,6 +119,7 @@ header {
 				width: 35vw;
 				height: 35vw;
 				transform: translate(-50%, -50%);
+				animation: rotate-circle 5s infinite linear;
 			}
 
 			img {
@@ -126,9 +127,50 @@ header {
 				display: none;
 			}
 
-			p {
-				border-bottom: 1px solid #777;
-				font-size: 1rem;
+			.techs {
+				position: relative;
+				height: 100%;
+				width: 100%;
+				z-index: 2000 !important;
+
+				svg {
+					position: absolute;
+					font-size: 50px;
+
+				}
+
+				svg:nth-child(1) {
+					color: #f7df1e;
+					top: 0;
+					left: 50%;
+					transform: translate(0, -50%);
+					display: block;
+					animation: rotate-js 5s infinite;
+				}
+
+				svg:nth-child(2) {
+					color: #21759b;
+					top: 50%;
+					right: 0;
+					transform: translate(50%, -50%);
+					animation: rotate-wp 5s infinite;
+				}
+
+				svg:nth-child(3) {
+					color: #8892be;
+					bottom: 0;
+					left: 50%;
+					transform: translate(-50%, 50%);
+					animation: rotate-php 5s infinite;
+				}
+
+				svg:nth-child(4) {
+					color: #3a2372;
+					top: 50%;
+					left: 0;
+					transform: translate(-50%, -50%);
+					animation: rotate-bs 5s infinite;
+				}
 			}
 
 		}
@@ -141,13 +183,84 @@ header {
 		bottom: 0;
 		width: 100%;
 		transform: translateX(-50%);
-
 		z-index: 1000;
 
 		img {
 			position: relative;
 			max-width: 100%;
 		}
+	}
+}
+
+@keyframes rotate-circle {
+	from {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes rotate-js {
+	0% {
+		transform: translate(0, -50%) rotate(0);
+		opacity: 0;
+		width: 0;
+	}
+
+	50% {
+		opacity: 1;
+		width: 100%;
+	}
+
+	100% {
+		width: 0;
+		opacity: 0;
+		transform: translate(0, -50%) rotate(-360deg);
+
+	}
+}
+
+@keyframes rotate-wp {
+	0% {
+		transform: translate(50%, -50%) rotate(0);
+		opacity: 0;
+		width: 100%;
+	}
+
+	75% {
+		opacity: 1;
+		width: 0;
+	}
+
+	100% {
+		width: 100%;
+		opacity: 0;
+		transform: translate(50%, -50%) rotate(-360deg);
+
+	}
+}
+
+@keyframes rotate-php {
+	from {
+		transform: translate(-50%, 50%) rotate(0);
+	}
+
+	to {
+		transform: translate(-50%, 50%) rotate(-360deg);
+
+	}
+}
+
+@keyframes rotate-bs {
+	from {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	to {
+		transform: translate(-50%, -50%) rotate(-360deg);
+
 	}
 }
 
@@ -158,6 +271,16 @@ header {
 
 	.land {
 		height: auto;
+
+		.content {
+			h1 {
+				font-size: 1.5rem;
+			}
+
+			p {
+				font-size: 1rem;
+			}
+		}
 
 		.photo {
 

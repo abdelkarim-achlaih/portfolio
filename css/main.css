@@ -77,11 +77,11 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   text-transform: uppercase;
 }
 .land .photo .img-holder {
-  z-index: 150;
   height: 100%;
   position: relative;
 }
 .land .photo .img-holder .circle {
+  z-index: 150;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -89,14 +89,50 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   width: 35vw;
   height: 35vw;
   transform: translate(-50%, -50%);
+  animation: rotate-circle 5s infinite linear;
 }
 .land .photo .img-holder img {
   max-width: 100%;
   display: none;
 }
-.land .photo .img-holder p {
-  border-bottom: 1px solid #777;
-  font-size: 1rem;
+.land .photo .img-holder .techs {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 2000 !important;
+}
+.land .photo .img-holder .techs svg {
+  position: absolute;
+  font-size: 50px;
+}
+.land .photo .img-holder .techs svg:nth-child(1) {
+  color: #f7df1e;
+  top: 0;
+  left: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  animation: rotate-js 5s infinite;
+}
+.land .photo .img-holder .techs svg:nth-child(2) {
+  color: #21759b;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  animation: rotate-wp 5s infinite;
+}
+.land .photo .img-holder .techs svg:nth-child(3) {
+  color: #8892be;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  animation: rotate-php 5s infinite;
+}
+.land .photo .img-holder .techs svg:nth-child(4) {
+  color: #3a2372;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  animation: rotate-bs 5s infinite;
 }
 .land .img-container {
   position: absolute;
@@ -111,12 +147,74 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   max-width: 100%;
 }
 
+@keyframes rotate-circle {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate-js {
+  0% {
+    transform: translate(0, -50%) rotate(0);
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    opacity: 1;
+    width: 100%;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+    transform: translate(0, -50%) rotate(-360deg);
+  }
+}
+@keyframes rotate-wp {
+  0% {
+    transform: translate(50%, -50%) rotate(0);
+    opacity: 0;
+    width: 100%;
+  }
+  75% {
+    opacity: 1;
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+    transform: translate(50%, -50%) rotate(-360deg);
+  }
+}
+@keyframes rotate-php {
+  from {
+    transform: translate(-50%, 50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, 50%) rotate(-360deg);
+  }
+}
+@keyframes rotate-bs {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
 @media (max-width: 991px) {
   header {
     margin-bottom: 50px;
   }
   .land {
     height: auto;
+  }
+  .land .content h1 {
+    font-size: 1.5rem;
+  }
+  .land .content p {
+    font-size: 1rem;
   }
   .land .photo .img-holder {
     width: 100%;
