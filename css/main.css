@@ -52,7 +52,7 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
 .hero-content {
   overflow: hidden;
   position: relative;
-  z-index: 100;
+  z-index: 10000;
 }
 
 .land {
@@ -61,7 +61,7 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
 }
 .land .content {
   position: relative;
-  z-index: 200;
+  z-index: 20000;
 }
 .land .content p:first-child {
   background-color: #64f4ac;
@@ -81,7 +81,6 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   position: relative;
 }
 .land .photo .img-holder .circle {
-  z-index: 150;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -99,9 +98,9 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   position: relative;
   height: 100%;
   width: 100%;
-  z-index: 2000 !important;
 }
 .land .photo .img-holder .techs svg {
+  z-index: 2000 !important;
   position: absolute;
   font-size: 50px;
 }
@@ -140,9 +139,9 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   bottom: 0;
   width: 100%;
   transform: translateX(-50%);
-  z-index: 1000;
 }
 .land .img-container img {
+  z-index: 1000;
   position: relative;
   max-width: 100%;
 }
@@ -233,4 +232,29 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
     height: 100%;
   }
 }
-/* End Land *//*# sourceMappingURL=main.css.map */
+/* End Land */
+/* Start Introduce */
+.introduce {
+  background-color: #25262a;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.introduce .skill {
+  background-color: #2d2e32;
+}
+.introduce .skill h3 {
+  color: #64f4ac;
+}
+.introduce .skill svg {
+  color: #64f4ac;
+  font-size: 1.5rem;
+}
+.introduce .skill h3 {
+  font-size: 1.5rem;
+}
+.introduce .skill p {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* End Introduce *//*# sourceMappingURL=main.css.map */
