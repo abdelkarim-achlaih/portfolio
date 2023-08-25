@@ -1,0 +1,190 @@
+/* Start Variables */
+
+$main: #64f4ac;
+$second: #7b2049;
+$back1: #2d2e32;
+$back2: #25262a;
+$grad2: #141572;
+$dark: #110b37;
+$duration: 0.4s;
+// $three: #e357ef;
+// $main-dark: #101928;
+// $second-dark: #152744;
+// $white-50: rgba(255, 255, 255, .5);
+
+/* End Variables */
+/* Start Global Rules */
+body {
+	font-family: 'Source Code Pro', monospace;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+
+/* End Global Rules */
+/* Start Components */
+
+
+/* End Components */
+/* Start Header */
+header {
+	min-width: 72px;
+
+	.navbar-toggler {
+		border-color: white;
+		color: white;
+
+		&:focus {
+			box-shadow: none;
+			border-color: $main;
+		}
+	}
+
+	.navbar-brand svg {
+		color: white;
+		font-size: 30px;
+
+		&:hover {
+			color: $main;
+		}
+	}
+
+	.nav-link {
+		color: white;
+		text-transform: capitalize;
+
+		&:hover,
+		&.active,
+		&:focus {
+			color: $main !important;
+		}
+	}
+}
+
+/* End Header */
+/* Start Land */
+.hero {
+	position: relative;
+	background-color: $back1;
+}
+
+
+.hero-content {
+	overflow: hidden;
+	position: relative;
+	z-index: 100;
+}
+
+.land {
+	height: calc(100vh - 72px);
+	position: relative;
+
+	.content {
+		position: relative;
+		z-index: 200;
+
+		p:first-child {
+			background-color: $main;
+			width: fit-content;
+			font-size: 13px;
+		}
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		a {
+			color: $main;
+			text-transform: uppercase;
+		}
+	}
+
+	.photo {
+
+		.img-holder {
+			z-index: 150;
+			height: 100%;
+			position: relative;
+
+			.circle {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				background-color: $back2;
+				width: 35vw;
+				height: 35vw;
+				transform: translate(-50%, -50%);
+			}
+
+			img {
+				max-width: 100%;
+				display: none;
+			}
+
+			p {
+				border-bottom: 1px solid #777;
+				font-size: 1rem;
+			}
+
+		}
+
+	}
+
+	.img-container {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		width: 100%;
+		transform: translateX(-50%);
+
+		z-index: 1000;
+
+		img {
+			position: relative;
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	header {
+		margin-bottom: 50px;
+	}
+
+	.land {
+		height: auto;
+
+		.photo {
+
+			.img-holder {
+				width: 100%;
+
+				.circle {
+					display: none;
+				}
+
+				img {
+					max-width: 100%;
+					display: block;
+				}
+			}
+
+		}
+
+		.img-container {
+			display: none;
+		}
+	}
+
+	.overlay {
+		height: 100%;
+	}
+
+}
+
+/* End Land */

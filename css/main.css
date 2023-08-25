@@ -1,1 +1,138 @@
-/*# sourceMappingURL=main.css.map */
+/* Start Variables */
+/* End Variables */
+/* Start Global Rules */
+body {
+  font-family: "Source Code Pro", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* End Global Rules */
+/* Start Components */
+/* End Components */
+/* Start Header */
+header {
+  min-width: 72px;
+}
+header .navbar-toggler {
+  border-color: white;
+  color: white;
+}
+header .navbar-toggler:focus {
+  box-shadow: none;
+  border-color: #64f4ac;
+}
+header .navbar-brand svg {
+  color: white;
+  font-size: 30px;
+}
+header .navbar-brand svg:hover {
+  color: #64f4ac;
+}
+header .nav-link {
+  color: white;
+  text-transform: capitalize;
+}
+header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
+  color: #64f4ac !important;
+}
+
+/* End Header */
+/* Start Land */
+.hero {
+  position: relative;
+  background-color: #2d2e32;
+}
+
+.hero-content {
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+}
+
+.land {
+  height: calc(100vh - 72px);
+  position: relative;
+}
+.land .content {
+  position: relative;
+  z-index: 200;
+}
+.land .content p:first-child {
+  background-color: #64f4ac;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 13px;
+}
+.land .content h1 {
+  font-size: 3rem;
+}
+.land .content a {
+  color: #64f4ac;
+  text-transform: uppercase;
+}
+.land .photo .img-holder {
+  z-index: 150;
+  height: 100%;
+  position: relative;
+}
+.land .photo .img-holder .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #25262a;
+  width: 35vw;
+  height: 35vw;
+  transform: translate(-50%, -50%);
+}
+.land .photo .img-holder img {
+  max-width: 100%;
+  display: none;
+}
+.land .photo .img-holder p {
+  border-bottom: 1px solid #777;
+  font-size: 1rem;
+}
+.land .img-container {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+.land .img-container img {
+  position: relative;
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  header {
+    margin-bottom: 50px;
+  }
+  .land {
+    height: auto;
+  }
+  .land .photo .img-holder {
+    width: 100%;
+  }
+  .land .photo .img-holder .circle {
+    display: none;
+  }
+  .land .photo .img-holder img {
+    max-width: 100%;
+    display: block;
+  }
+  .land .img-container {
+    display: none;
+  }
+  .overlay {
+    height: 100%;
+  }
+}
+/* End Land *//*# sourceMappingURL=main.css.map */
