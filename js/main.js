@@ -35,3 +35,36 @@ lis.forEach((li) => {
 		});
 	};
 });
+
+let servicesPara = document.querySelectorAll(".services .service p");
+let servicesTitle = document.querySelectorAll(".services .service h4");
+
+window.onresize = (_) => {
+	heightAuto(servicesPara);
+	heightAuto(servicesTitle);
+	setHeight(servicesPara);
+	setHeight(servicesTitle);
+};
+
+window.onload = (_) => {
+	setHeight(servicesPara);
+	setHeight(servicesTitle);
+};
+
+function heightAuto(array) {
+	array.forEach((service) => {
+		service.style.height = `auto`;
+	});
+}
+
+function setHeight(array) {
+	let max = 0;
+	array.forEach((service) => {
+		if (service.offsetHeight > max) {
+			max = service.offsetHeight;
+		}
+	});
+	array.forEach((service) => {
+		service.style.height = `${max}px`;
+	});
+}

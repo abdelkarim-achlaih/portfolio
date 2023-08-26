@@ -414,6 +414,8 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
 /* Start Testimonials */
 .testimonials {
   background-color: #2d2e32;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .testimonials .container {
   width: 70%;
@@ -463,4 +465,70 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
     width: 100%;
   }
 }
-/* End Testimonials *//*# sourceMappingURL=main.css.map */
+/* Start Services */
+.services {
+  background-color: #25262a;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  transition: 0.7s ease-in-out;
+}
+.services .container {
+  position: relative;
+  z-index: 3;
+}
+.services .service {
+  background-color: #2d2e32;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 40px;
+  opacity: 0;
+  transition: 0.4s;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #64f4ac;
+}
+.services .service:hover {
+  transform: translateY(-20px);
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 5px 15px;
+}
+.services .service .service-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.services .service .service-img img {
+  width: 64px;
+}
+.services .service h4 {
+  margin-bottom: 20px;
+  color: white;
+}
+.services .service p {
+  color: white;
+  line-height: 1.8;
+  font-size: 12px;
+}
+.services .service .order a {
+  color: #2d2e32;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #64f4ac;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.services .service .order a:hover {
+  background-color: transparent;
+  color: #64f4ac;
+}
+
+/* End Services *//*# sourceMappingURL=main.css.map */
