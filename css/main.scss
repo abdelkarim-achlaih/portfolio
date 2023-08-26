@@ -374,6 +374,10 @@ header {
 		transition: $duration;
 		position: relative;
 
+		.work-info {
+			flex-wrap: wrap;
+		}
+
 		h3 {
 			color: $main;
 		}
@@ -415,7 +419,7 @@ header {
 		}
 
 		.work-links {
-			opacity: 0;
+			opacity: 1;
 			position: absolute;
 			bottom: 5rem;
 			left: 50%;
@@ -434,6 +438,7 @@ header {
 					background-color: $back1;
 					font-size: 12px;
 					transition: $duration;
+					white-space: nowrap;
 
 					&:hover {
 						color: $back2;
@@ -446,6 +451,7 @@ header {
 	}
 
 	.others {
+		margin-top: 160px;
 
 		a,
 		h3 {

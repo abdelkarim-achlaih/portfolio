@@ -290,6 +290,9 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   transition: 0.4s;
   position: relative;
 }
+.works .work .work-info {
+  flex-wrap: wrap;
+}
 .works .work h3 {
   color: #64f4ac;
 }
@@ -322,7 +325,7 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   opacity: 1;
 }
 .works .work .work-links {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   bottom: 5rem;
   left: 50%;
@@ -340,10 +343,14 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   background-color: #2d2e32;
   font-size: 12px;
   transition: 0.4s;
+  white-space: nowrap;
 }
 .works .work .work-links .work-link a:hover {
   color: #25262a;
   background-color: #64f4ac;
+}
+.works .others {
+  margin-top: 160px;
 }
 .works .others a,
 .works .others h3 {
