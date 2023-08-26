@@ -264,6 +264,28 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   background-color: #2d2e32;
   transform: translateX(-1000px);
   transition: 0.7s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.introduce .skill::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: 0.4s;
+  opacity: 0;
+}
+.introduce .skill:hover::after {
+  background-color: #64f4ac;
+  opacity: 0.1;
+  height: 1000%;
+  width: 1000%;
+  border-radius: 0;
 }
 .introduce .skill.animate {
   transform: translateX(0);

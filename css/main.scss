@@ -343,6 +343,31 @@ header {
 		background-color: $back1;
 		transform: translateX(-1000px);
 		transition: .7s;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			transition: $duration;
+			opacity: 0;
+		}
+
+		&:hover::after {
+			background-color: $main;
+			opacity: .1;
+			height: 1000%;
+			width: 1000%;
+			border-radius: 0;
+
+		}
 
 		&.animate {
 			transform: translateX(0);
