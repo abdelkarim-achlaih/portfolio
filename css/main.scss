@@ -372,6 +372,7 @@ header {
 	.work {
 		background-color: $back1;
 		transition: $duration;
+		position: relative;
 
 		h3 {
 			color: $main;
@@ -387,13 +388,61 @@ header {
 			cursor: pointer;
 		}
 
+		.work-img {
+
+			overflow: hidden;
+		}
+
+		img {
+			transition: $duration;
+		}
+
 		&:hover {
 			transform: scale(1.02);
 
 			svg {
 				color: $main;
 			}
+
+			img {
+				opacity: .6;
+				transform: scale(1.09);
+			}
+
+			.work-links {
+				opacity: 1;
+			}
 		}
+
+		.work-links {
+			opacity: 0;
+			position: absolute;
+			bottom: 5rem;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 20px;
+			transition: $duration;
+
+			.work-link {
+				a {
+					display: block;
+					text-decoration: none;
+					color: white;
+					padding: 10px;
+					border: 1px solid white;
+					background-color: $back1;
+					font-size: 12px;
+					transition: $duration;
+
+					&:hover {
+						color: $back2;
+						background-color: $main;
+					}
+				}
+			}
+		}
+
 	}
 
 	.others {
