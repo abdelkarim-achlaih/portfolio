@@ -100,12 +100,30 @@ header {
 		}
 
 		h1 {
-			font-size: 3rem;
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 1rem;
 		}
 
 		a {
 			color: $main;
 			text-transform: uppercase;
+		}
+
+		.socials {
+
+			a {
+				color: rgb(255, 255, 255, .5);
+				transition: $duration;
+				font-size: 1.35rem;
+
+
+				&:hover {
+					color: $main;
+				}
+			}
 		}
 	}
 
