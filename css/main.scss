@@ -363,6 +363,19 @@ header {
 }
 
 /* End Introduce */
+.technologies {
+	background-color: $back2;
+
+	.row {
+		svg {
+			display: block;
+			width: fit-content;
+			font-size: 60px;
+			color: rgb(255, 255, 255, .5);
+		}
+	}
+}
+
 /* Start Works */
 .works {
 	background-color: $back2;
