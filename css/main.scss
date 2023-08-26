@@ -30,6 +30,11 @@ body {
 	background-color: $main;
 }
 
+ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
 
 /* End Global Rules */
 /* Start Components */
@@ -518,3 +523,72 @@ header {
 }
 
 /* End Works */
+/* Start Testimonials */
+.testimonials {
+	background-color: $back1;
+
+	.container {
+		width: 70%;
+	}
+
+	.tab {
+		position: relative;
+		top: -5px;
+		padding: 50px;
+		display: none;
+		background-color: $back2;
+		color: white;
+
+		.rating {
+			svg {
+				color: $main;
+				font-size: 12px;
+				margin-right: 5px;
+			}
+
+			span {
+				font-size: 12px;
+			}
+		}
+
+		.quote {
+			svg {
+				font-size: 80px;
+			}
+		}
+	}
+
+
+	li {
+		padding: 10px 20px;
+		user-select: none;
+		cursor: pointer;
+		transition: duration;
+		border-bottom: 1px solid rgb(255, 255, 255, .5);
+		border-color: rgb(255, 255, 255, .5);
+
+		h5 {
+			font-size: 15px;
+		}
+
+		p {
+			font-size: 13px;
+		}
+	}
+
+	li.active,
+	li:hover {
+		border-color: $main;
+	}
+
+}
+
+@media (max-width: 991px) {
+	.testimonials {
+		.container {
+			width: 100%;
+		}
+	}
+}
+
+/* End Testimonials */
