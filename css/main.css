@@ -91,6 +91,12 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
 .land .content p {
   font-size: 1rem;
 }
+.land .content .mobile-photo {
+  display: none;
+  max-width: 70%;
+  margin-top: -40px;
+  margin-bottom: 30px;
+}
 .land .content a {
   color: #64f4ac;
   text-transform: uppercase;
@@ -242,15 +248,15 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   .land .content p {
     font-size: 1rem;
   }
+  .land .content .mobile-photo {
+    display: block;
+  }
   .land .photo .img-holder {
     width: 100%;
+    display: none;
   }
   .land .photo .img-holder .circle {
     display: none;
-  }
-  .land .photo .img-holder img {
-    max-width: 100%;
-    display: block;
   }
   .land .img-container {
     display: none;
@@ -520,6 +526,9 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
 @media (max-width: 991px) {
   .testimonials .container {
     width: 100%;
+  }
+  .testimonials .container .tab p {
+    font-size: 12px;
   }
 }
 /* Start Services */

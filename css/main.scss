@@ -112,6 +112,13 @@ header {
 			font-size: 1rem;
 		}
 
+		.mobile-photo {
+			display: none;
+			max-width: 70%;
+			margin-top: -40px;
+			margin-bottom: 30px;
+		}
+
 		a {
 			color: $main;
 			text-transform: uppercase;
@@ -307,21 +314,27 @@ header {
 			p {
 				font-size: 1rem;
 			}
+
+			.mobile-photo {
+				display: block;
+			}
 		}
+
 
 		.photo {
 
 			.img-holder {
 				width: 100%;
+				display: none;
 
 				.circle {
 					display: none;
 				}
 
-				img {
-					max-width: 100%;
-					display: block;
-				}
+				// img {
+				// max-width: 100%;
+				// display: block;
+				// }
 			}
 
 		}
@@ -661,6 +674,12 @@ header {
 	.testimonials {
 		.container {
 			width: 100%;
+
+			.tab {
+				p {
+					font-size: 12px;
+				}
+			}
 		}
 	}
 }
