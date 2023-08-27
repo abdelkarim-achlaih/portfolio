@@ -468,8 +468,8 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
 /* Start Services */
 .services {
   background-color: #25262a;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   position: relative;
   overflow: hidden;
   left: 0;
@@ -480,14 +480,16 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   position: relative;
   z-index: 3;
 }
+.services .services-info {
+  margin-bottom: 7rem;
+}
 .services .service {
   background-color: #2d2e32;
   text-align: center;
   padding: 30px;
   margin-bottom: 40px;
-  opacity: 0;
-  transition: 0.4s;
   opacity: 1;
+  transition: 0.4s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -531,4 +533,43 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   color: #64f4ac;
 }
 
-/* End Services *//*# sourceMappingURL=main.css.map */
+/* End Services */
+/* Start Contact */
+.contact {
+  overflow: hidden;
+  background-color: #2d2e32;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.contact label {
+  color: white;
+  margin-bottom: 1rem;
+}
+.contact textarea,
+.contact input {
+  margin-bottom: 2.5rem;
+  background-color: #25262a;
+  border: 1px solid #64f4ac;
+  caret-color: #64f4ac;
+  color: white;
+}
+.contact textarea:focus,
+.contact input:focus {
+  color: white;
+  box-shadow: 0 0 0 0.25rem rgba(100, 244, 172, 0.2588235294);
+  background-color: #25262a;
+}
+.contact .btn:hover {
+  background-color: #64f4ac;
+  color: #2d2e32;
+  border-color: #64f4ac;
+}
+.contact .message {
+  transform: translateX(5000px);
+  transition: 0.4s;
+}
+.contact .message.show {
+  transform: translateX(0);
+}
+
+/* End Contact *//*# sourceMappingURL=main.css.map */

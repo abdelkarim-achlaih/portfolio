@@ -596,24 +596,21 @@ header {
 /* Start Services */
 .services {
 	background-color: $back2;
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
 	position: relative;
 	overflow: hidden;
-	// left: 50%;
-	// width: 0;
 	left: 0;
 	width: 100%;
 	transition: .7s ease-in-out;
 
-	// &.animate {
-	// 	left: 0;
-	// 	width: 100%;
-	// }
-
 	.container {
 		position: relative;
 		z-index: 3;
+	}
+
+	.services-info {
+		margin-bottom: 7rem;
 	}
 
 	.service {
@@ -621,9 +618,8 @@ header {
 		text-align: center;
 		padding: 30px;
 		margin-bottom: 40px;
-		opacity: 0;
-		transition: $duration;
 		opacity: 1;
+		transition: $duration;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -633,8 +629,6 @@ header {
 			transform: translateY(-20px);
 			box-shadow: rgba(255, 255, 255, 0.25) 0px 5px 15px;
 		}
-
-		&.animate {}
 
 		.service-img {
 			width: 120px;
@@ -681,3 +675,47 @@ header {
 }
 
 /* End Services */
+/* Start Contact */
+.contact {
+	overflow: hidden;
+	background-color: $back1;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+
+	label {
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	textarea,
+	input {
+		margin-bottom: 2.5rem;
+		background-color: $back2;
+		border: 1px solid $main;
+		caret-color: $main;
+		color: white;
+
+		&:focus {
+			color: white;
+			box-shadow: 0 0 0 0.25rem #64f4ac42;
+			background-color: $back2;
+		}
+	}
+
+	.btn:hover {
+		background-color: $main;
+		color: $back1;
+		border-color: $main;
+	}
+
+	.message {
+		transform: translateX(5000px);
+		transition: $duration;
+
+		&.show {
+			transform: translateX(0);
+		}
+	}
+}
+
+/* End Contact */

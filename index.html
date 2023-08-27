@@ -36,6 +36,9 @@
 									<a class="nav-link p-lg-3" href="#works">Works</a>
 								</li>
 								<li class="nav-item">
+									<a class="nav-link p-lg-3" href="#testimonials">Testimonials</a>
+								</li>
+								<li class="nav-item">
 									<a class="nav-link p-lg-3" href="#services">Services</a>
 								</li>
 								<li class="nav-item">
@@ -312,7 +315,7 @@
 			</div>
 			<div class="tabs">
 				<div class="tabs-holder mb-5">
-					<div class="tab rounded-4" data-type="First Tab">
+					<div class="tab rounded-4 active" data-type="First Tab">
 						<div class="row">
 							<div class="col-md-10 order-3 order-md-1">
 								<div class="rating mb-4">
@@ -372,7 +375,7 @@
 
 				</div>
 				<ul class="toogler row">
-					<li class="col-4" data-num="Third Tab">
+					<li class="col-4 active" data-num="Third Tab">
 						<div class="row text-md-start text-center">
 							<div class="col-md-3"><img src="https://placehold.co/80" class="img-fluid rounded-circle mb-3" alt="">
 							</div>
@@ -408,7 +411,7 @@
 	</section>
 	<section class="services" id="services">
 		<div class="container">
-			<div class="services-info mb-5">
+			<div class="services-info">
 				<h3 class="text-center text-white fs-3 mb-3">My Services</h3>
 				<p class="text-white-50 text-center mb-5">Empowering your digital journey with innovative solutions that leave a
 					lasting impression
@@ -546,6 +549,38 @@
 			</div>
 		</div>
 	</section>
+	<section class="contact" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+					<div class="contact-info">
+						<h3 class="text-center text-lg-start text-white fs-2 mb-5 lh-base">Let's make something amazing together.
+						</h3>
+						<p class="text-white-50 text-center text-lg-start mb-5 fs-4">Start by saying hi
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-1"></div>
+				<div class="col-lg-6">
+					<form id="contact-form">
+						<label for="name" class="form-label">Name</label>
+						<input type="text" name="user_name" id="name" class="form-control" required>
+						<label for="email" class="form-label">Email</label>
+						<input type="email" name="user_email" id="email" class="form-control" required>
+						<label for="message" class="form-label">Message</label>
+						<textarea name="message" id="message" class="form-control" required></textarea>
+						<div class="submit d-flex justify-content-between align-items-center">
+							<input type="submit" value="Send" class="btn btn-primary m-0">
+							<div class="message text-white-50">
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/all.min.js"></script>
 	<script src="js/main.js"></script>

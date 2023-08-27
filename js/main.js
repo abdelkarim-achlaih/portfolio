@@ -1,10 +1,10 @@
 let introduceSection = document.querySelector(".introduce");
 let skills = document.querySelectorAll(".skills .skill");
 
-let showed = false;
+let showed1 = false;
 
 window.onscroll = (_) => {
-	if (window.scrollY > introduceSection.offsetTop - 200 && !showed) {
+	if (window.scrollY > introduceSection.offsetTop - 200 && !showed1) {
 		let time = 0;
 		skills.forEach((skill) => {
 			setTimeout(() => {
@@ -12,7 +12,7 @@ window.onscroll = (_) => {
 			}, time);
 			time += 700;
 		});
-		showed = true;
+		showed1 = true;
 	}
 };
 
@@ -47,6 +47,7 @@ window.onresize = (_) => {
 };
 
 window.onload = (_) => {
+	contact();
 	setHeight(servicesPara);
 	setHeight(servicesTitle);
 };
@@ -67,4 +68,29 @@ function setHeight(array) {
 	array.forEach((service) => {
 		service.style.height = `${max}px`;
 	});
+}
+
+function contact() {
+	emailjs.init("IRmeyUBLgdA6L65yI");
+	document
+		.getElementById("contact-form")
+		.addEventListener("submit", function (event) {
+			event.preventDefault();
+			emailjs.sendForm("potfolio_contact", "potfolio_contact", this).then(
+				function () {
+					document.querySelector(".contact .message").classList.add("show");
+					document.querySelector(
+						".contact .message"
+					).innerHTML = `Thanks for starting this epic journey !`;
+					console.log("SUCCESS!");
+				},
+				function (error) {
+					document.querySelector(".contact .message").classList.add("show");
+					document.querySelector(
+						".contact .message"
+					).innerHTML = `Ooops ! Try again please`;
+					console.log("FAILED...", error);
+				}
+			);
+		});
 }
