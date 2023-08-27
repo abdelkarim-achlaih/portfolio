@@ -16,10 +16,11 @@ window.onscroll = (_) => {
 	}
 };
 
+let tabsHolder = document.querySelector(".testimonials .tabs-holder");
 let lis = document.querySelectorAll(".testimonials li");
 let tabs = document.querySelectorAll(".testimonials .tab");
 
-tabs[0].style.display = "block";
+tabs[0].classList.add("show");
 lis.forEach((li) => {
 	li.onclick = function () {
 		lis.forEach((li) => {
@@ -28,9 +29,13 @@ lis.forEach((li) => {
 		this.classList.add("active");
 		tabs.forEach((tab) => {
 			if (tab.dataset.type === this.dataset.num) {
-				tab.style.display = "block";
+				tab.classList.add("show");
 			} else {
-				tab.style.display = "none";
+				tab.classList.remove("show");
+				tab.classList.add("hide");
+				setTimeout(() => {
+					tab.classList.remove("hide");
+				}, 1000);
 			}
 		});
 	};
@@ -44,12 +49,14 @@ window.onresize = (_) => {
 	heightAuto(servicesTitle);
 	setHeight(servicesPara);
 	setHeight(servicesTitle);
+	tabHolderHeight(tabs);
 };
 
 window.onload = (_) => {
 	contact();
 	setHeight(servicesPara);
 	setHeight(servicesTitle);
+	tabHolderHeight(tabs);
 };
 
 function heightAuto(array) {
@@ -68,6 +75,15 @@ function setHeight(array) {
 	array.forEach((service) => {
 		service.style.height = `${max}px`;
 	});
+}
+function tabHolderHeight(array) {
+	let max = 0;
+	array.forEach((item) => {
+		if (item.offsetHeight > max) {
+			max = item.offsetHeight;
+		}
+	});
+	tabsHolder.style.height = `${max}px`;
 }
 
 function contact() {
