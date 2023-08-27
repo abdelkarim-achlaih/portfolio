@@ -572,4 +572,24 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   transform: translateX(0);
 }
 
-/* End Contact *//*# sourceMappingURL=main.css.map */
+/* End Contact */
+/* Start Footer */
+footer {
+  background-color: #2d2e32;
+  padding-bottom: 1rem;
+}
+footer .name a,
+footer .socials a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+footer .socials a:hover {
+  color: #64f4ac;
+}
+footer .thanks a {
+  color: #64f4ac;
+}
+
+/* End Footer *//*# sourceMappingURL=main.css.map */

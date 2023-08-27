@@ -719,3 +719,26 @@ header {
 }
 
 /* End Contact */
+/* Start Footer */
+footer {
+	background-color: $back1;
+	padding-bottom: 1rem;
+
+	.name a,
+	.socials a {
+		color: white;
+		text-decoration: none;
+		font-size: 1.5rem;
+		transition: $duration;
+	}
+
+	.socials a:hover {
+		color: $main;
+	}
+
+	.thanks a {
+		color: $main;
+	}
+}
+
+/* End Footer */
