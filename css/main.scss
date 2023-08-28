@@ -226,6 +226,44 @@ header {
 	}
 }
 
+.flag {
+	transition: 1s ease-in-out;
+	transform: translateX(-5000px);
+
+
+
+	&.show {
+		transform: translateX(0);
+		// animation: showFlag 1s forwards;
+	}
+
+	// &.hide {
+	// 	animation: hideFlag 1s forwards;
+	// }
+}
+
+@keyframes showFlag {
+	from {
+		transform: translateX(-5000px);
+	}
+
+	to {
+		transform: translateX(0);
+
+	}
+}
+
+@keyframes hideFlag {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-5000px);
+
+	}
+}
+
 @keyframes rotate-circle {
 	from {
 		transform: translate(-50%, -50%) rotate(0);

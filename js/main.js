@@ -110,3 +110,41 @@ function contact() {
 			);
 		});
 }
+
+let baseTime = 3500;
+let showTime = 3000;
+
+animateServices();
+setInterval(animateServices, servicesTitle.length * baseTime);
+
+function animateServices() {
+	let flag = document.querySelector(".flag");
+	let i = 0;
+	flag.innerHTML = servicesTitle[i].innerHTML;
+	i++;
+	toogleFlag(flag, showTime);
+	let tmp = setInterval((_) => {
+		flag.innerHTML = servicesTitle[i].innerHTML;
+		toogleFlag(flag, showTime);
+		i++;
+	}, baseTime);
+
+	setTimeout(() => {
+		clearInterval(tmp);
+	}, (servicesTitle.length - 1) * baseTime);
+}
+
+function toogleFlag(flag, showTime) {
+	showFlag(flag);
+	setTimeout(() => {
+		hideFlag(flag);
+	}, showTime);
+}
+
+function showFlag(flag) {
+	flag.classList.add("show");
+}
+
+function hideFlag(flag) {
+	flag.classList.remove("show");
+}
