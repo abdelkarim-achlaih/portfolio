@@ -577,16 +577,45 @@ header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   background-color: #2d2e32;
   text-align: center;
   padding: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   opacity: 1;
   transition: 0.4s;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid #64f4ac;
+  position: relative;
+}
+.services .service.special::after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #2d2e32;
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: #64f4ac;
+  white-space: nowrap;
+}
+.services .service.special.soon::after {
+  font-size: 12px;
+  content: "Soon...";
+}
+.services .service.special.popular {
+  transform: translateY(-40px);
+}
+.services .service.special.popular .service-img {
+  border: 1px solid #64f4ac;
+}
+.services .service.special.popular h4 {
+  color: #64f4ac;
+}
+.services .service.special.popular::after {
+  content: "Most Popular";
 }
 .services .service:hover {
-  transform: translateY(-20px);
+  transform: translateY(-40px);
   box-shadow: rgba(255, 255, 255, 0.25) 0px 5px 15px;
 }
 .services .service .service-img {
