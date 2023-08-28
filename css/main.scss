@@ -44,6 +44,8 @@ ul {
 /* Start Header */
 header {
 	min-width: 72px;
+	position: relative;
+	z-index: 1000;
 
 	.navbar-toggler {
 		border-color: white;
