@@ -1,3 +1,4 @@
+import { englishContent, frenchContent } from "../js/content.js";
 let introduceSection = document.querySelector(".introduce");
 let skills = document.querySelectorAll(".skills .skill");
 
@@ -147,4 +148,26 @@ function showFlag(flag) {
 
 function hideFlag(flag) {
 	flag.classList.remove("show");
+}
+
+let contents = Array.from(document.querySelectorAll('[data-content=""]'));
+let tooglerLangs = Array.from(document.querySelectorAll(".dropdown-menu li"));
+let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
+
+dropToogle.innerHTML = tooglerLangs[0].innerHTML;
+
+tooglerLangs[0].addEventListener("click", (e) => {
+	writeContent(englishContent, e);
+});
+tooglerLangs[1].addEventListener("click", (e) => {
+	writeContent(frenchContent, e);
+});
+
+function writeContent(contentArray, e) {
+	let i = 0;
+	contents.forEach((content) => {
+		content.innerHTML = contentArray[i];
+		i++;
+	});
+	dropToogle.innerHTML = e.target.innerHTML;
 }
