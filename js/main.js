@@ -164,10 +164,48 @@ tooglerLangs[1].addEventListener("click", (e) => {
 });
 
 function writeContent(contentArray, e) {
-	let i = 0;
 	contents.forEach((content) => {
-		content.innerHTML = contentArray[i];
-		i++;
+		content.innerHTML = "";
 	});
-	dropToogle.innerHTML = e.target.innerHTML;
+	loader();
+	setTimeout(() => {
+		removeLoader();
+		let i = 0;
+		contents.forEach((content) => {
+			content.innerHTML = contentArray[i];
+			i++;
+		});
+		dropToogle.innerHTML = e.target.innerHTML;
+		heightAuto(servicesPara);
+		heightAuto(servicesTitle);
+		setHeight(servicesPara);
+		setHeight(servicesTitle);
+		tabHolderHeight(tabs);
+	}, 2000);
+}
+
+function loader() {
+	let loaderElement = document.createElement("div");
+	loaderElement.classList.add("loader");
+	for (let i = 0; i < 3; i++) {
+		let div = document.createElement("div");
+		loaderElement.appendChild(div);
+	}
+	let tmp = [];
+	for (let i = 0; i < contents.length; i++) {
+		tmp[i] = loaderElement.cloneNode(true);
+	}
+	let x = 0;
+	contents.forEach((content) => {
+		content.prepend(tmp[x]);
+		x++;
+	});
+}
+
+function removeLoader() {
+	let x = 0;
+	contents.forEach((content) => {
+		content.firstElementChild.remove();
+		x++;
+	});
 }

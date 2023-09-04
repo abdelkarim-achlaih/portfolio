@@ -63,6 +63,7 @@ export let englishContent = [
 	"Order Now",
 	"PSD or Figma to Web Page or WordPress Theme",
 	"Bring your design concepts to life with precision and elegance. I specialize in converting your PSD or Figma files into fully functional web pages or WordPress themes, ensuring pixel-perfect accuracy and maintaining the integrity of your design. Seamlessly blending aesthetics with functionality, I bridge the gap between design and development, creating a seamless user experience that reflects your original vision. Let's turn your creative designs into interactive digital masterpieces that captivate your audience.",
+	"Order Now",
 	"Web Application Development",
 	"Elevate your business processes with custom web applications designed to streamline operations and enhance user experiences. Whether it's an internal tool to boost efficiency or a customer-facing platform that offers unique functionality, I specialize in developing web applications that cater to your specific needs. From interactive dashboards and data visualization tools to seamless integrations with existing systems, I turn complex ideas into intuitive solutions that drive growth and innovation. Collaborate with me to bring your web app vision to life and revolutionize the way you do business online.",
 	"Order Now",
