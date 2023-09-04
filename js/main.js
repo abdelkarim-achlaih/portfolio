@@ -154,7 +154,13 @@ let contents = Array.from(document.querySelectorAll('[data-content=""]'));
 let tooglerLangs = Array.from(document.querySelectorAll(".dropdown-menu li"));
 let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
 
-dropToogle.innerHTML = tooglerLangs[0].innerHTML;
+dropToogle.innerHTML = tooglerLangs[1].innerHTML;
+
+let i = 0;
+contents.forEach((content) => {
+	content.innerHTML = frenchContent[i];
+	i++;
+});
 
 tooglerLangs[0].addEventListener("click", (e) => {
 	writeContent(englishContent, e);
