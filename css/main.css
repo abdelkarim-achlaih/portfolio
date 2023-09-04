@@ -59,6 +59,16 @@ header .nav-link {
 header .nav-link:hover, header .nav-link.active, header .nav-link:focus {
   color: #64f4ac !important;
 }
+header .dropdown-menu {
+  background-color: #25262a;
+}
+header .dropdown-menu a {
+  color: white;
+  transition: 0.4s;
+}
+header .dropdown-menu a:hover {
+  background-color: #64f4ac;
+}
 
 /* End Header */
 /* Start Land */

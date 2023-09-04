@@ -76,6 +76,20 @@ header {
 			color: $main !important;
 		}
 	}
+
+	.dropdown-menu {
+		background-color: $back2;
+
+
+		a {
+			color: white;
+			transition: $duration;
+
+			&:hover {
+				background-color: $main;
+			}
+		}
+	}
 }
 
 /* End Header */
