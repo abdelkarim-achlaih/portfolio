@@ -22,7 +22,7 @@ export let englishContent = [
 	"Your ally in the realm of web development. In a world saturated with cookie-cutter websites, I bring a breath of fresh air. My two years of experience as a full stack web developer empower me to craft tailored solutions that speak to your unique project requirements.",
 	"Latest Works",
 	"Perfect solutions for digital experience",
-	"Fylo Website",
+	"Landing Pages",
 	"Live Demo",
 	"View Code",
 	"Blog Website",
@@ -106,7 +106,7 @@ export let frenchContent = [
 	"Derniers travaux",
 	"Des solutions parfaites pour l'expérience numérique",
 
-	"Site web Fylo",
+	"Landing Pages",
 	"Démonstration en direct",
 	"Voir le code",
 
