@@ -54,6 +54,7 @@ window.onresize = (_) => {
 };
 
 window.onload = (_) => {
+	projectsSetup();
 	contact();
 	setHeight(servicesPara);
 	setHeight(servicesTitle);
@@ -157,10 +158,10 @@ let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
 dropToogle.innerHTML = tooglerLangs[1].innerHTML;
 
 let i = 0;
-contents.forEach((content) => {
-	content.innerHTML = frenchContent[i];
-	i++;
-});
+// contents.forEach((content) => {
+// 	content.innerHTML = frenchContent[i];
+// 	i++;
+// });
 
 tooglerLangs[0].addEventListener("click", (e) => {
 	writeContent(englishContent, e);
@@ -217,8 +218,8 @@ function removeLoader() {
 }
 
 function projectsSetup() {
-	let projectsContainer = documen.querySelector(".works .container .row");
-	let projects = [
+	let projectsContainer = document.querySelector(".works .container .row");
+	let projectsContent = [
 		{
 			name: "Landing Pages",
 			techs: ["bootstrap", "js", "css"],
@@ -281,4 +282,30 @@ function projectsSetup() {
 			demoLink: "https://abdelkarim-achlaih.github.io/Template-Three/",
 		},
 	];
+	projectsContent.forEach((project) => {
+		let div = document.createElement("div");
+		div.classList.add("col-lg-4");
+		div.innerHTML = `
+					<div class="work p-lg-5 p-3 rounded-4 mb-5">
+						<div class="work-info mb-4 d-flex justify-content-between">
+							<h3 class="fs-5" data-content="">${project.name}</h3>
+							<div class="languages">
+								<i class="fa-brands fa-bootstrap"></i>
+								<i class="fa-brands fa-square-js"></i>
+								<i class="fa-brands fa-css3-alt"></i>
+							</div>
+						</div>
+						<div class="work-img rounded-4"><img src="images/${project.imgLink}" alt="" class="img-fluid rounded-4"></div>
+						<div class="work-links">
+							<div class="work-link">
+								<a href="${project.demo}" target="_blank" data-content="">Live Demo</a>
+							</div>
+							<div class="work-link">
+								<a href="https://github.com/abdelkarim-achlaih/Fylo" target="_blank" data-content="">View Code</a>
+							</div>
+						</div>
+					</div>
+		`;
+		projectsContainer.append(div);
+	});
 }
