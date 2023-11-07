@@ -595,6 +595,37 @@ header {
 			text-decoration: underline $main;
 		}
 	}
+
+	.popup {
+		position: fixed;
+		height: auto;
+		max-height: 95vh;
+		background-color: $back3;
+		width: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2000;
+
+		.popup-title {
+			max-height: 30vh;
+		}
+
+		.popup-content {
+
+			overflow-y: scroll;
+			max-height: 65vh;
+
+			.skill {
+				color: $back1;
+				background-color: $main;
+			}
+
+			a {
+				color: $main;
+			}
+		}
+	}
 }
 
 @media (max-width: 991px) {

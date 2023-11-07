@@ -464,6 +464,31 @@ header .dropdown-menu a:hover {
   -webkit-text-decoration: underline #64f4ac;
           text-decoration: underline #64f4ac;
 }
+.works .popup {
+  position: fixed;
+  height: auto;
+  max-height: 95vh;
+  background-color: #4d4e52;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+}
+.works .popup .popup-title {
+  max-height: 30vh;
+}
+.works .popup .popup-content {
+  overflow-y: scroll;
+  max-height: 65vh;
+}
+.works .popup .popup-content .skill {
+  color: #2d2e32;
+  background-color: #64f4ac;
+}
+.works .popup .popup-content a {
+  color: #64f4ac;
+}
 
 @media (max-width: 991px) {
   .works .work .work-info {
