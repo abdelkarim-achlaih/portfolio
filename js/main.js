@@ -215,3 +215,70 @@ function removeLoader() {
 		x++;
 	});
 }
+
+function projectsSetup() {
+	let projectsContainer = documen.querySelector(".works .container .row");
+	let projects = [
+		{
+			name: "Landing Pages",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "Landings.png",
+			demoLink: "https://abdelkarim-achlaih.github.io/Currency_App/",
+		},
+		{
+			name: "Modern UI Designs",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "Modern UI Designs.png",
+			demoLink: "https://abdelkarim-achlaih.github.io/Fylo/",
+		},
+		{
+			name: "Scroll Activated Animations",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "Next-Gen.png",
+			demoLink:
+				"https://abdelkarim-achlaih.github.io/Next-Gen-Solutions-Website/",
+		},
+		{
+			name: "Blog Website",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "Nexus Blog.png",
+			demoLink: "http://myblog.abdelkarim.rf.gd/",
+		},
+		{
+			name: "Startup Website",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "Stara Immo.png",
+			demoLink: "http://stara-immo.rf.gd/",
+		},
+		{
+			name: "Online Store",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "SuitedUp.png",
+			demoLink: "http://suitedup.rf.gd/",
+		},
+		{
+			name: "PHP App",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "PHP App.png",
+			demoLink: "http://blog.abdelkarim.rf.gd/",
+		},
+		{
+			name: "PSD Conversion",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "Template 1.png",
+			demoLink: "https://abdelkarim-achlaih.github.io/Template-One/",
+		},
+		{
+			name: "PSD Conversion",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "Template 2.png",
+			demoLink: "https://abdelkarim-achlaih.github.io/Template-Two/",
+		},
+		{
+			name: "PSD Conversion",
+			techs: ["bootstrap", "js", "css"],
+			imgLink: "Template 3.png",
+			demoLink: "https://abdelkarim-achlaih.github.io/Template-Three/",
+		},
+	];
+}
