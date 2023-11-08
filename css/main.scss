@@ -596,34 +596,57 @@ header {
 		}
 	}
 
-	.popup {
-		position: fixed;
-		height: auto;
-		max-height: 95vh;
-		background-color: $back3;
-		width: 50%;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 2000;
+}
 
-		.popup-title {
-			max-height: 30vh;
+section {
+	position: relative;
+	z-index: 1;
+}
+
+.popup {
+	display: block;
+	width: 100%;
+	background-color: rgba(45, 46, 50, 0.275);
+
+	&.show {
+
+		display: block;
+	}
+
+	position: fixed;
+	height: auto;
+	max-height: 95vh;
+	background-color: $back3;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2000;
+
+	.popup-container {
+		z-index: 2000;
+		position: relative;
+		width: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+
+	}
+
+	.popup-title {
+		max-height: 30vh;
+	}
+
+	.popup-content {
+
+		overscroll-behavior: contain;
+		overflow-y: scroll;
+		max-height: 65vh;
+
+		.skill {
+			color: $back1;
+			background-color: $main;
 		}
 
-		.popup-content {
-
-			overflow-y: scroll;
-			max-height: 65vh;
-
-			.skill {
-				color: $back1;
-				background-color: $main;
-			}
-
-			a {
-				color: $main;
-			}
+		a {
+			color: $main;
 		}
 	}
 }

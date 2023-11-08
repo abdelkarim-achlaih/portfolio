@@ -292,11 +292,11 @@ function projectsSetup() {
 			desc: "In this project, I transformed a given PSD design into a fully functional website using HTML, CSS and JavaScript. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
 		},
 	];
-	projectsContent.forEach((project) => {
+	projectsContent.forEach((project, index) => {
 		let div = document.createElement("div");
 		div.classList.add("col-lg-4");
 		div.innerHTML = `
-					<div class="work p-lg-5 p-3 rounded-4 mb-5">
+					<div class="work p-lg-5 p-3 rounded-4 mb-5" data-num="${index}">
 						<div class="work-info mb-4 d-flex justify-content-between">
 							<h3 class="fs-5" data-content="">${project.name}</h3>
 							<div class="languages">
@@ -306,16 +306,16 @@ function projectsSetup() {
 							</div>
 						</div>
 						<div class="work-img rounded-4"><img src="images/${project.imgLink}" alt="" class="img-fluid rounded-4"></div>
-						<div class="work-links">
-							<div class="work-link">
-								<a href="${project.demo}" target="_blank" data-content="">Live Demo</a>
-							</div>
-							<div class="work-link">
-								<a href="https://github.com/abdelkarim-achlaih/Fylo" target="_blank" data-content="">View Code</a>
-							</div>
-						</div>
 					</div>
 		`;
 		projectsContainer.append(div);
 	});
+	let projectsDiv = projectsContainer.querySelectorAll(".work");
+	projectsDiv.forEach((project) => {
+		project.addEventListener("click", showPopup, false);
+	});
+}
+let pop = document.querySelector(".popup");
+function showPopup(e) {
+	pop.classList.add("show");
 }
