@@ -317,5 +317,6 @@ function projectsSetup() {
 }
 let pop = document.querySelector(".popup");
 function showPopup(e) {
+	document.body.style.overflow = "hidden";
 	pop.classList.add("show");
 }

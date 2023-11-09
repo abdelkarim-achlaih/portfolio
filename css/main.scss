@@ -598,14 +598,8 @@ header {
 
 }
 
-.website {
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-
 .popup {
-	display: block;
+	display: none;
 	width: 100%;
 	background-color: rgba(45, 46, 50, 0.814);
 	width: 100%;
@@ -628,7 +622,31 @@ header {
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		z-index: 500000;
 
+		.close-btn {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: 1px solid $main;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+
+			svg {
+				transition-duration: $duration;
+			}
+
+			&:hover {
+				svg {
+					color: $main;
+				}
+			}
+		}
 	}
 
 	.popup-title {
@@ -638,7 +656,7 @@ header {
 	.popup-content {
 
 		overscroll-behavior: contain;
-		overflow-y: scroll;
+		overflow-y: auto;
 		max-height: 65vh;
 
 		.skill {

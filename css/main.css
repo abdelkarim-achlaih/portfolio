@@ -465,14 +465,8 @@ header .dropdown-menu a:hover {
           text-decoration: underline #64f4ac;
 }
 
-.website {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
 .popup {
-  display: block;
+  display: none;
   width: 100%;
   background-color: rgba(45, 46, 50, 0.814);
   width: 100%;
@@ -494,13 +488,33 @@ header .dropdown-menu a:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 500000;
+}
+.popup .popup-container .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #64f4ac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.popup .popup-container .close-btn svg {
+  transition-duration: 0.4s;
+}
+.popup .popup-container .close-btn:hover svg {
+  color: #64f4ac;
 }
 .popup .popup-title {
   max-height: 30vh;
 }
 .popup .popup-content {
   overscroll-behavior: contain;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 65vh;
 }
 .popup .popup-content .skill {
