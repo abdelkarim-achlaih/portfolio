@@ -465,19 +465,20 @@ header .dropdown-menu a:hover {
           text-decoration: underline #64f4ac;
 }
 
-section {
+.website {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .popup {
   display: block;
   width: 100%;
-  background-color: rgba(45, 46, 50, 0.275);
+  background-color: rgba(45, 46, 50, 0.814);
+  width: 100%;
   position: fixed;
   height: auto;
-  max-height: 95vh;
-  background-color: #4d4e52;
+  height: 100vh;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2000;
@@ -486,11 +487,13 @@ section {
   display: block;
 }
 .popup .popup-container {
+  background-color: #4d4e52;
   z-index: 2000;
   position: relative;
   width: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .popup .popup-title {
   max-height: 30vh;

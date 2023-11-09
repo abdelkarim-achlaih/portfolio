@@ -598,35 +598,36 @@ header {
 
 }
 
-section {
+.website {
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
 }
 
 .popup {
 	display: block;
 	width: 100%;
-	background-color: rgba(45, 46, 50, 0.275);
-
-	&.show {
-
-		display: block;
-	}
-
+	background-color: rgba(45, 46, 50, 0.814);
+	width: 100%;
 	position: fixed;
 	height: auto;
-	max-height: 95vh;
-	background-color: $back3;
+	height: 100vh;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 2000;
 
+	&.show {
+		display: block;
+	}
+
 	.popup-container {
+		background-color: $back3;
 		z-index: 2000;
 		position: relative;
 		width: 50%;
 		left: 50%;
-		transform: translateX(-50%);
+		top: 50%;
+		transform: translate(-50%, -50%);
 
 	}
 
