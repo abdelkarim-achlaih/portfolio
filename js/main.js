@@ -53,8 +53,8 @@ window.onresize = (_) => {
 	tabHolderHeight(tabs);
 };
 
+projectsSetup();
 window.onload = (_) => {
-	projectsSetup();
 	contact();
 	setHeight(servicesPara);
 	setHeight(servicesTitle);
@@ -316,7 +316,21 @@ function projectsSetup() {
 	});
 }
 let pop = document.querySelector(".popup");
+let popInfos = {
+	name: pop.querySelector(".popup-title h1"),
+	imgLink: pop.querySelector("img").src,
+	techs: pop.querySelector(".skills-container"),
+	desc: pop.querySelector(".description"),
+	demoLink: pop.querySelector("a"),
+};
 function showPopup(e) {
+	let index = parseInt(e.target.dataset.num);
+	let ele = e.target;
+	console.log(ele.tagName == "div");
+	console.log(e.target);
+	if (e.target.tagName !== "div") {
+	}
+	// popInfos.name.innerHTML = e.target.projectsContent.name;
 	document.body.style.overflow = "hidden";
 	pop.classList.add("show");
 }
