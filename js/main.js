@@ -320,3 +320,10 @@ function showPopup(e) {
 	document.body.style.overflow = "hidden";
 	pop.classList.add("show");
 }
+document
+	.querySelector(".close-btn")
+	.addEventListener("click", closePopup, false);
+function closePopup(e) {
+	document.body.style.overflow = "auto";
+	pop.classList.remove("show");
+}
