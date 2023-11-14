@@ -1,5 +1,5 @@
 import { englishContent, frenchContent } from "../js/content.js";
-import { projects } from "../js/projects.js";
+import { projects, techs } from "../js/projects.js";
 let introduceSection = document.querySelector(".introduce");
 let skills = document.querySelectorAll(".skills .skill");
 
@@ -222,16 +222,18 @@ function projectsSetup() {
 	let projectsContainer = document.querySelector(".works .container .row");
 
 	projects.forEach((project, index) => {
+		let techsI = "";
+		project.techs.forEach((tech) => {
+			techsI += `<i class="${techs[tech]}"></i>`;
+		});
+		console.log(techsI);
 		let div = document.createElement("div");
 		div.classList.add("col-lg-4");
 		div.innerHTML = `
-					<div class="work p-lg-5 p-3 rounded-4 mb-5"">
-						<div class="work-info mb-4 d-flex justify-content-between">
-							<h3 class="fs-5" data-content="">${project.name}</h3>
-							<div class="languages">
-								<i class="fa-brands fa-bootstrap"></i>
-								<i class="fa-brands fa-square-js"></i>
-								<i class="fa-brands fa-css3-alt"></i>
+					<div class="work p-3 rounded-4 mb-5"">
+						<div class="work-info mb-4 text-center">
+							<h3 class="fs-5 mb-3" data-content="">${project.name}</h3>
+							<div class="languages">${techsI}
 							</div>
 						</div>
 						<div class="work-img rounded-4"><img src="images/${project.imgLink}" data-num="${index} alt="" class="img-fluid rounded-4"></div>

@@ -510,9 +510,7 @@ header {
 		transition: $duration;
 		position: relative;
 
-		.work-info {
-			flex-wrap: wrap;
-		}
+
 
 		h3 {
 			color: $main;
@@ -526,11 +524,16 @@ header {
 			border-radius: 5px;
 			transition: $duration;
 			cursor: pointer;
+
+			&:not(:last-of-type) {
+				margin-right: 10px;
+			}
 		}
 
 		.work-img {
 
 			overflow: hidden;
+			cursor: pointer;
 		}
 
 		img {

@@ -396,9 +396,6 @@ header .dropdown-menu a:hover {
   transition: 0.4s;
   position: relative;
 }
-.works .work .work-info {
-  flex-wrap: wrap;
-}
 .works .work h3 {
   color: #64f4ac;
 }
@@ -411,8 +408,12 @@ header .dropdown-menu a:hover {
   transition: 0.4s;
   cursor: pointer;
 }
+.works .work svg:not(:last-of-type) {
+  margin-right: 10px;
+}
 .works .work .work-img {
   overflow: hidden;
+  cursor: pointer;
 }
 .works .work img {
   transition: 0.4s;
