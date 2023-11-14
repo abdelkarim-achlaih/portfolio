@@ -225,7 +225,7 @@ function projectsSetup() {
 		let div = document.createElement("div");
 		div.classList.add("col-lg-4");
 		div.innerHTML = `
-					<div class="work p-lg-5 p-3 rounded-4 mb-5" data-num="${index}">
+					<div class="work p-lg-5 p-3 rounded-4 mb-5"">
 						<div class="work-info mb-4 d-flex justify-content-between">
 							<h3 class="fs-5" data-content="">${project.name}</h3>
 							<div class="languages">
@@ -234,12 +234,14 @@ function projectsSetup() {
 								<i class="fa-brands fa-css3-alt"></i>
 							</div>
 						</div>
-						<div class="work-img rounded-4"><img src="images/${project.imgLink}" alt="" class="img-fluid rounded-4"></div>
+						<div class="work-img rounded-4"><img src="images/${project.imgLink}" data-num="${index} alt="" class="img-fluid rounded-4"></div>
 					</div>
 		`;
+		// let imgConta = div.querySelector("work-img");
+		// let imgEle = document.createElement('img');
 		projectsContainer.append(div);
 	});
-	let projectsDiv = projectsContainer.querySelectorAll(".work");
+	let projectsDiv = projectsContainer.querySelectorAll(".work .work-img img");
 	projectsDiv.forEach((project) => {
 		project.addEventListener("click", showPopup, false);
 	});
@@ -247,25 +249,28 @@ function projectsSetup() {
 let pop = document.querySelector(".popup");
 let popInfos = {
 	name: pop.querySelector(".popup-title h1"),
-	imgLink: pop.querySelector("img").src,
+	imgLink: pop.querySelector("img"),
 	techs: pop.querySelector(".skills-container"),
 	desc: pop.querySelector(".description"),
 	demoLink: pop.querySelector("a"),
 };
 function showPopup(e) {
-	let index = parseInt(e.target.dataset.num);
 	let ele = e.target;
-	console.log(ele.tagName == "div");
-	console.log(e.target);
-	if (e.target.tagName !== "div") {
-	}
-	// popInfos.name.innerHTML = e.target.projectsContent.name;
+	let index = parseInt(ele.dataset.num);
+	let project = projects[index];
+	popInfos.name.innerHTML = project.name;
+	popInfos.imgLink.src = `images/${project.imgLink}`;
+	popInfos.techs.innerHTML = project.techs;
+	popInfos.desc.innerHTML = project.desc;
+	popInfos.demoLink.innerHTML = project.demoLink;
 	document.body.style.overflow = "hidden";
 	pop.classList.add("show");
+	pop.querySelector(".popup-content").scrollTo(0, 0);
 }
 document
 	.querySelector(".close-btn")
 	.addEventListener("click", closePopup, false);
+
 function closePopup(e) {
 	document.body.style.overflow = "auto";
 	pop.classList.remove("show");
