@@ -483,7 +483,7 @@ header .dropdown-menu a:hover {
 }
 .popup .popup-container {
   border-radius: 30px;
-  background-color: #4d4e52;
+  background-color: #25262a;
   z-index: 2000;
   position: relative;
   width: 50%;
@@ -535,6 +535,10 @@ header .dropdown-menu a:hover {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+  }
+  .popup .popup-container {
+    width: 95%;
+    text-align: center;
   }
 }
 /* End Works */

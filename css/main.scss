@@ -619,7 +619,7 @@ header {
 
 	.popup-container {
 		border-radius: 30px;
-		background-color: $back3;
+		background-color: $back2;
 		z-index: 2000;
 		position: relative;
 		width: 50%;
@@ -687,6 +687,11 @@ header {
 				align-items: center;
 			}
 		}
+	}
+
+	.popup .popup-container {
+		width: 95%;
+		text-align: center;
 	}
 }
 
