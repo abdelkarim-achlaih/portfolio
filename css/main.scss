@@ -617,12 +617,16 @@ header {
 		display: block;
 	}
 
+	.row {
+		height: 100%;
+	}
+
 	.popup-container {
 		border-radius: 30px;
 		background-color: $back2;
 		z-index: 2000;
 		position: relative;
-		width: 50%;
+		width: 100%;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);

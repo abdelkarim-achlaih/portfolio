@@ -226,7 +226,6 @@ function projectsSetup() {
 		project.techs.forEach((tech) => {
 			techsI += `<i class="${techs[tech]}"></i>`;
 		});
-		console.log(techsI);
 		let div = document.createElement("div");
 		div.classList.add("col-lg-4");
 		div.innerHTML = `
@@ -273,7 +272,9 @@ function showPopup(e) {
 document
 	.querySelector(".close-btn")
 	.addEventListener("click", closePopup, false);
-
+document.querySelectorAll(".hider").forEach((hider) => {
+	hider.addEventListener("click", closePopup, false);
+});
 function closePopup(e) {
 	document.body.style.overflow = "auto";
 	pop.classList.remove("show");

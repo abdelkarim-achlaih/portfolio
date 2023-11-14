@@ -481,12 +481,15 @@ header .dropdown-menu a:hover {
 .popup.show {
   display: block;
 }
+.popup .row {
+  height: 100%;
+}
 .popup .popup-container {
   border-radius: 30px;
   background-color: #25262a;
   z-index: 2000;
   position: relative;
-  width: 50%;
+  width: 100%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
