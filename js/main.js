@@ -262,9 +262,10 @@ function showPopup(e) {
 	let project = projects[index];
 	popInfos.name.innerHTML = project.name;
 	popInfos.imgLink.src = `images/${project.imgLink}`;
-	popInfos.techs.innerHTML = project.techs;
+	popInfos.techs.innerHTML = project.techs.join(", ");
 	popInfos.desc.innerHTML = project.desc;
 	popInfos.demoLink.innerHTML = project.demoLink;
+	popInfos.demoLink.href = project.demoLink;
 	document.body.style.overflow = "hidden";
 	pop.classList.add("show");
 	pop.querySelector(".popup-content").scrollTo(0, 0);

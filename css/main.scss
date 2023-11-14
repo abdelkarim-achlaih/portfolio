@@ -520,7 +520,7 @@ header {
 			color: rgb(255, 255, 255, .5);
 			background-color: $back3;
 			padding: 5px 10px;
-			font-size: 15px;
+			font-size: 20px;
 			border-radius: 5px;
 			transition: $duration;
 			cursor: pointer;
@@ -618,6 +618,7 @@ header {
 	}
 
 	.popup-container {
+		border-radius: 30px;
 		background-color: $back3;
 		z-index: 2000;
 		position: relative;
@@ -626,6 +627,10 @@ header {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 500000;
+
+		h5 {
+			text-decoration: underline;
+		}
 
 		.close-btn {
 			position: absolute;
