@@ -239,8 +239,6 @@ function projectsSetup() {
 						<div class="work-img rounded-4"><img src="images/${project.imgLink}" data-num="${index} alt="" class="img-fluid rounded-4"></div>
 					</div>
 		`;
-		// let imgConta = div.querySelector("work-img");
-		// let imgEle = document.createElement('img');
 		projectsContainer.append(div);
 	});
 	let projectsDiv = projectsContainer.querySelectorAll(".work .work-img img");
