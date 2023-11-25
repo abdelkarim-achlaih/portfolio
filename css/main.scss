@@ -666,7 +666,6 @@ header {
 	}
 
 	.popup-content {
-
 		overscroll-behavior: contain;
 		overflow-y: auto;
 		max-height: 65vh;
@@ -679,6 +678,19 @@ header {
 		a {
 			color: $main;
 		}
+	}
+}
+
+::-webkit-scrollbar {
+	background-color: $back1;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #43a172;
+	border-radius: 10px;
+
+	&:hover {
+		background-color: $main;
 	}
 }
 
