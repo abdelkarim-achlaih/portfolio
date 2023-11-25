@@ -152,24 +152,24 @@ function hideFlag(flag) {
 	flag.classList.remove("show");
 }
 
-let contents = Array.from(document.querySelectorAll('[data-content=""]'));
-let tooglerLangs = Array.from(document.querySelectorAll(".dropdown-menu li"));
-let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
+// let contents = Array.from(document.querySelectorAll('[data-content=""]'));
+// let tooglerLangs = Array.from(document.querySelectorAll(".dropdown-menu li"));
+// let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
 
-dropToogle.innerHTML = tooglerLangs[1].innerHTML;
+// dropToogle.innerHTML = tooglerLangs[1].innerHTML;
 
-let i = 0;
+// let i = 0;
 // contents.forEach((content) => {
 // 	content.innerHTML = frenchContent[i];
 // 	i++;
 // });
 
-tooglerLangs[0].addEventListener("click", (e) => {
-	writeContent(englishContent, e);
-});
-tooglerLangs[1].addEventListener("click", (e) => {
-	writeContent(frenchContent, e);
-});
+// tooglerLangs[0].addEventListener("click", (e) => {
+// 	writeContent(englishContent, e);
+// });
+// tooglerLangs[1].addEventListener("click", (e) => {
+// 	writeContent(frenchContent, e);
+// });
 
 function writeContent(contentArray, e) {
 	contents.forEach((content) => {
