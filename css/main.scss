@@ -607,7 +607,6 @@ header {
 	background-color: rgba(45, 46, 50, 0.814);
 	width: 100%;
 	position: fixed;
-	height: auto;
 	height: 100vh;
 	top: 50%;
 	transform: translateY(-50%);
@@ -662,13 +661,13 @@ header {
 	}
 
 	.popup-title {
-		max-height: 30vh;
+		max-height: 15vh;
 	}
 
 	.popup-content {
 		overscroll-behavior: contain;
 		overflow-y: auto;
-		max-height: 65vh;
+		max-height: 75vh;
 
 		.skill {
 			color: $back1;

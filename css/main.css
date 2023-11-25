@@ -472,7 +472,6 @@ header .dropdown-menu a:hover {
   background-color: rgba(45, 46, 50, 0.814);
   width: 100%;
   position: fixed;
-  height: auto;
   height: 100vh;
   top: 50%;
   transform: translateY(-50%);
@@ -518,12 +517,12 @@ header .dropdown-menu a:hover {
   color: #64f4ac;
 }
 .popup .popup-title {
-  max-height: 30vh;
+  max-height: 15vh;
 }
 .popup .popup-content {
   overscroll-behavior: contain;
   overflow-y: auto;
-  max-height: 65vh;
+  max-height: 75vh;
 }
 .popup .popup-content .skill {
   color: #2d2e32;
