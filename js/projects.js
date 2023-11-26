@@ -32,7 +32,7 @@ export let projects = [
 		name: "Startup Website",
 		techs: ["WordPress", "JavaScript", "Sass", "Bootstrap"],
 		imgLink: "Stara Immo.png",
-		demoLink: "http://stara-immo.rf.gd/",
+		demoLink: "https://staraimmo.ma",
 		desc: "This project highlights the services provided by a building construction company, the website was built under the requirements provided by the in-house marketing strategist. the website is SEO Friendly, not built by Elementor or another plugin, but the owner wanted to have a customized theme that suits his domain of expertise. So I built a new theme from scratch using mainly Bootstrap and Sass, configuring the backend using WordPress PHP Loops, sidebars, pages, and installing plugins such as WPforms.",
 	},
 	{
