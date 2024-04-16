@@ -253,7 +253,8 @@ let popInfos = {
 	imgLink: pop.querySelector("img"),
 	techs: pop.querySelector(".skills-container"),
 	desc: pop.querySelector(".description"),
-	demoLink: pop.querySelector("a"),
+	demoLink: pop.querySelector("a.demo"),
+	codeLink: pop.querySelector("a.code"),
 };
 function showPopup(e) {
 	let ele = e.target;
@@ -263,8 +264,10 @@ function showPopup(e) {
 	popInfos.imgLink.src = `images/${project.imgLink}`;
 	popInfos.techs.innerHTML = project.techs.join(", ");
 	popInfos.desc.innerHTML = project.desc;
-	popInfos.demoLink.innerHTML = project.demoLink;
 	popInfos.demoLink.href = project.demoLink;
+	project.codeLink.length > 0
+		? (popInfos.codeLink.href = project.codeLink)
+		: (popInfos.codeLink.style.display = "none");
 	document.body.style.overflow = "hidden";
 	pop.classList.add("show");
 	pop.querySelector(".popup-content").scrollTo(0, 0);
