@@ -391,6 +391,26 @@ header .dropdown-menu a:hover {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.works .shuffle {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.works .shuffle li {
+  color: #64f4ac;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.works .shuffle .active,
+.works .shuffle li:hover {
+  background-color: #64f4ac;
+  color: #2d2e32;
+}
 .works .work {
   background-color: #2d2e32;
   transition: 0.4s;

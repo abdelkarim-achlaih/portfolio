@@ -505,6 +505,29 @@ header {
 	padding-top: 100px;
 	padding-bottom: 100px;
 
+	.shuffle {
+		display: flex;
+		justify-content: center;
+		gap: 50px;
+		margin: auto;
+		margin-bottom: 50px;
+
+		li {
+			color: $main;
+			text-transform: uppercase;
+			font-size: 15px;
+			padding: 10px;
+			transition-duration: $duration;
+			cursor: pointer;
+		}
+
+		.active,
+		li:hover {
+			background-color: $main;
+			color: $back1;
+		}
+	}
+
 	.work {
 		background-color: $back1;
 		transition: $duration;
