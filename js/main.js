@@ -227,9 +227,9 @@ function projectsSetup() {
 			techsI += `<i class="${techs[tech]}"></i>`;
 		});
 		let div = document.createElement("div");
-		div.classList.add("col-lg-4");
+		div.classList.add("col-lg-4", "work-holder");
 		div.innerHTML = `
-					<div class="work p-3 rounded-4 mb-5"">
+					<div class="work p-3 rounded-4 mb-5"" data-types= "${project.types}">
 						<div class="work-info mb-4 text-center">
 							<h3 class="fs-5 mb-3" data-content="">${project.name}</h3>
 							<div class="languages">${techsI}
@@ -279,3 +279,24 @@ function closePopup(e) {
 	document.body.style.overflow = "auto";
 	pop.classList.remove("show");
 }
+let flrTogs = document.querySelectorAll(".works .shuffle li");
+flrTogs.forEach((flrTog) => {
+	flrTog.onclick = function () {
+		flrTogs.forEach((flrTog) => {
+			flrTog.classList.remove("active");
+		});
+		flrTog.classList.add("active");
+		let active = flrTog.innerHTML;
+		let works = document.querySelectorAll(".works .work-holder");
+		works.forEach((work) => {
+			work.style.display = "block";
+			let types = work.firstElementChild.dataset.types.split(",");
+			if (!types.includes(active)) {
+				work.style.display = "none";
+			}
+			if (active === "All") {
+				work.style.display = "block";
+			}
+		});
+	};
+});

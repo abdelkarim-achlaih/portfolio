@@ -1,10 +1,27 @@
 export let projects = [
 	{
+		name: "Roibeasts Real Estate",
+		techs: ["WordPress"],
+		imgLink: "Landings.png",
+		demoLink: "https://abdelkarim-achlaih.github.io/Currency_App/",
+		desc: "In these projects, I transformed given PSD designs into fully functional websites using HTML, CSS, and JavaScript. Some of them have an integrated API that fetches data in real time, in order to prevent page multiple reloadings. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
+		types: ["Projects", "Blogs"],
+	},
+	{
+		name: "Kiosque CAFC Marketplace",
+		techs: ["WordPress"],
+		imgLink: "Landings.png",
+		demoLink: "https://abdelkarim-achlaih.github.io/Currency_App/",
+		desc: "In these projects, I transformed given PSD designs into fully functional websites using HTML, CSS, and JavaScript. Some of them have an integrated API that fetches data in real time, in order to prevent page multiple reloadings. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
+		types: ["Projects", "Stores"],
+	},
+	{
 		name: "Landing Pages",
 		techs: ["Bootstrap", "JavaScript", "Sass"],
 		imgLink: "Landings.png",
 		demoLink: "https://abdelkarim-achlaih.github.io/Currency_App/",
 		desc: "In these projects, I transformed given PSD designs into fully functional websites using HTML, CSS, and JavaScript. Some of them have an integrated API that fetches data in real time, in order to prevent page multiple reloadings. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
+		types: ["Templates"],
 	},
 	{
 		name: "Modern UI Designs",
@@ -12,6 +29,7 @@ export let projects = [
 		imgLink: "Modern UI Designs.png",
 		demoLink: "https://abdelkarim-achlaih.github.io/Fylo/",
 		desc: "In this project, I transformed given PSD designs into fully functional websites using HTML and CSS. I meticulously coded and optimized the designs to ensure their responsiveness, providing a seamless user experience across various devices and browsers.",
+		types: ["Templates"],
 	},
 	{
 		name: "Scroll Activated Animations",
@@ -20,6 +38,7 @@ export let projects = [
 		demoLink:
 			"https://abdelkarim-achlaih.github.io/Next-Gen-Solutions-Website/",
 		desc: "If you asked me, what is your top 5 projects, I'm pretty sure that this one has a place among them, in this project, I tried to make the layout more interactive with the user inputs, such as on mouse move or on scrolling, so you will find a lot of animations, loaders, pinned sections, scroll activated animations... all these features have implemented with HTML, CSS, JavaScript, Bootstrap, Sass, GSAP, Particles.Js, Lenis.Js... and of course a lot of time and dedicated hard work.",
+		types: ["Templates"],
 	},
 	{
 		name: "Blog Website",
@@ -27,6 +46,7 @@ export let projects = [
 		imgLink: "Nexus Blog.png",
 		demoLink: "http://myblog.abdelkarim.rf.gd/",
 		desc: "Developing a customized WordPress theme for a personal blog website using HTML, CSS, JavaScript, Sass, Bootstrap, PHP, and WordPress. This project started by installing a new customized theme, based on the PHP Loop provided by WordPress, pages, posts, and sidebars, then editing their appearance and responsiveness across all devices using Bootstrap and Sass, and some JavaScript to fix issues cannot be handled using just HTML and CSS.",
+		types: ["Demos", "Blogs"],
 	},
 	{
 		name: "Startup Website",
@@ -34,6 +54,7 @@ export let projects = [
 		imgLink: "Stara Immo.png",
 		demoLink: "https://staraimmo.ma",
 		desc: "This project highlights the services provided by a building construction company, the website was built under the requirements provided by the in-house marketing strategist. the website is SEO Friendly, not built by Elementor or another plugin, but the owner wanted to have a customized theme that suits his domain of expertise. So I built a new theme from scratch using mainly Bootstrap and Sass, configuring the backend using WordPress PHP Loops, sidebars, pages, and installing plugins such as WPforms.",
+		types: ["Projects"],
 	},
 	{
 		name: "Online Store",
@@ -41,13 +62,15 @@ export let projects = [
 		imgLink: "SuitedUp.png",
 		demoLink: "http://suitedup.rf.gd/",
 		desc: "In this project, I initiated the development process with a thorough WooCommerce store setup, configuring product categories, attributes, and payment gateways with Stripe to create a fully functional e-commerce platform. My focus was on designing a user-friendly and visually appealing online store, optimizing product listings, implementing secure transaction processing, and integrating essential e-commerce features for a seamless shopping experience.",
+		types: ["Demos", "Stores"],
 	},
 	{
-		name: "PHP App",
+		name: "Online Community",
 		techs: ["PHP", "MySQL", "JavaScript", "CSS"],
 		imgLink: "PHP App.png",
 		demoLink: "http://blog.abdelkarim.rf.gd/",
 		desc: "In this project, I began with the design of a robust MySQL database, establishing a structured foundation for a feature-rich PHP and MySQL-based blog system. This system offer user registration, content management, categorization, and interaction features using HTML, CSS and JavaScript, with a strong focus on security and responsive web design.",
+		types: ["Projects", "Demos", "Blogs"],
 	},
 	{
 		name: "PSD Conversion",
@@ -55,6 +78,7 @@ export let projects = [
 		imgLink: "Template 1.png",
 		demoLink: "https://abdelkarim-achlaih.github.io/Template-One/",
 		desc: "In this project, I transformed a given PSD design into a fully functional website using HTML and CSS. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
+		types: ["templates"],
 	},
 	{
 		name: "PSD Conversion",
@@ -62,6 +86,7 @@ export let projects = [
 		imgLink: "Template 2.png",
 		demoLink: "https://abdelkarim-achlaih.github.io/Template-Two/",
 		desc: "In this project, I transformed a given PSD design into a fully functional website using HTML, CSS and JavaScript. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
+		types: ["templates"],
 	},
 	{
 		name: "PSD Conversion",
@@ -69,6 +94,7 @@ export let projects = [
 		imgLink: "Template 3.png",
 		demoLink: "https://abdelkarim-achlaih.github.io/Template-Three/",
 		desc: "In this project, I transformed a given PSD design into a fully functional website using HTML, CSS and JavaScript. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
+		types: ["templates"],
 	},
 ];
 export let techs = {
