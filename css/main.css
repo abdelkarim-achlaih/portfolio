@@ -397,6 +397,9 @@ header .dropdown-menu a:hover {
   gap: 50px;
   margin: auto;
   margin-bottom: 50px;
+  background-color: #2d2e32;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .works .shuffle li {
   color: #64f4ac;

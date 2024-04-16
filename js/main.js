@@ -265,6 +265,7 @@ function showPopup(e) {
 	popInfos.techs.innerHTML = project.techs.join(", ");
 	popInfos.desc.innerHTML = project.desc;
 	popInfos.demoLink.href = project.demoLink;
+	popInfos.codeLink.style.display = "block";
 	project.codeLink.length > 0
 		? (popInfos.codeLink.href = project.codeLink)
 		: (popInfos.codeLink.style.display = "none");
