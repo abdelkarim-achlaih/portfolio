@@ -579,9 +579,111 @@ header .dropdown-menu a:hover {
   }
 }
 /* End Works */
+/* Start Steps */
+.steps {
+  background-color: #25262a;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  background-image: url(../images/Arrow.svg);
+  background-size: 95%;
+  background-position-y: 200px;
+  background-position-x: 2.5vw;
+  background-repeat: no-repeat;
+}
+.steps .steps-container {
+  display: flex;
+  justify-content: space-between;
+  perspective: 200px;
+  perspective-origin: center center;
+}
+.steps .steps-container .step-holder {
+  flex-basis: calc((100% - 80px) / 5);
+  counter-increment: step;
+}
+.steps .steps-container .step-holder:hover .step {
+  transform: translateY(-100%) rotateX(180deg);
+}
+.steps .steps-container .step-holder:hover .step::after {
+  opacity: 0;
+}
+.steps .steps-container .step {
+  color: #64f4ac;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  transform-origin: center bottom;
+}
+.steps .steps-container .step::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #64f4ac;
+  color: #2d2e32;
+  font-size: 15px;
+  content: counter(step);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.steps .steps-container .step div {
+  background-color: #2d2e32;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: white;
+}
+.steps .steps-container .step div svg {
+  font-size: 60px;
+}
+.steps .steps-container .step div h2 {
+  font-size: 18px;
+}
+.steps .steps-container .step div h4 {
+  font-size: 16px;
+  color: #64f4ac;
+}
+.steps .steps-container .step div p {
+  font-size: 12px;
+  text-align: center;
+}
+.steps .steps-container .step .face-1 {
+  transform: translate(-50%, -50%);
+}
+.steps .steps-container .step .face-2 {
+  transform: translate(-50%, -50%) rotateX(180deg);
+  backface-visibility: hidden;
+}
+
+/* End Steps */
+/* Start Performance */
+.performance {
+  background-color: #2d2e32;
+}
+.performance span {
+  color: #64f4ac;
+}
+
+/* End Performance */
 /* Start Testimonials */
 .testimonials {
-  background-color: #2d2e32;
+  background-color: #25262a;
   padding-top: 100px;
   padding-bottom: 100px;
   overflow: hidden;
@@ -603,7 +705,7 @@ header .dropdown-menu a:hover {
   width: 100%;
   padding: 50px;
   transform: translateX(5000px);
-  background-color: #25262a;
+  background-color: #2d2e32;
   color: white;
   transition: 0.4s;
 }

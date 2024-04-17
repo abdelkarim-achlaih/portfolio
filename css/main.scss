@@ -737,9 +737,131 @@ header {
 }
 
 /* End Works */
+/* Start Steps */
+.steps {
+	background-color: $back2;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	overflow: hidden;
+	background-image: url(../images/Arrow.svg);
+	background-size: 95%;
+	background-position-y: 200px;
+	background-position-x: 2.5vw;
+	background-repeat: no-repeat;
+
+
+	.steps-container {
+		display: flex;
+		justify-content: space-between;
+		perspective: 200px;
+		perspective-origin: center center;
+
+		.step-holder {
+			flex-basis: calc((100% - 4 * 20px) / 5);
+
+			&:hover .step {
+				transform: translateY(-100%) rotateX(180deg);
+
+				&::after {
+					opacity: 0;
+				}
+			}
+
+			counter-increment: step;
+		}
+
+		.step {
+			color: $main;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&::after {
+				position: absolute;
+				top: 0;
+				right: 0;
+				transform: translate(50%, -50%);
+				height: 25px;
+				width: 25px;
+				border-radius: 50%;
+				background-color: $main;
+				color: $back1;
+				font-size: 15px;
+				content: counter(step);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: $duration;
+			}
+
+
+			height: 200px;
+			transition: transform .7s;
+			transform-style: preserve-3d;
+			transform-origin: center bottom;
+
+
+			div {
+				background-color: $back1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-size: 15px;
+				color: white;
+
+				svg {
+					font-size: 60px;
+				}
+
+				h2 {
+					font-size: 18px;
+				}
+
+				h4 {
+					font-size: 16px;
+					color: $main;
+				}
+
+				p {
+					font-size: 12px;
+					text-align: center;
+				}
+			}
+
+			.face-1 {
+				transform: translate(-50%, -50%);
+			}
+
+			.face-2 {
+				transform: translate(-50%, -50%) rotateX(180deg);
+				backface-visibility: hidden;
+			}
+
+		}
+	}
+}
+
+/* End Steps */
+/* Start Performance */
+.performance {
+	background-color: $back1;
+
+	span {
+		color: $main;
+	}
+}
+
+/* End Performance */
 /* Start Testimonials */
 .testimonials {
-	background-color: $back1;
+	background-color: $back2;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	overflow: hidden;
@@ -764,7 +886,7 @@ header {
 		width: 100%;
 		padding: 50px;
 		transform: translateX(5000px);
-		background-color: $back2;
+		background-color: $back1;
 		color: white;
 		transition: $duration;
 
