@@ -124,6 +124,7 @@ header .dropdown-menu {
 header .dropdown-menu a {
   color: white;
   transition: 0.4s;
+  text-transform: capitalize;
 }
 header .dropdown-menu a:hover {
   background-color: #00c769;

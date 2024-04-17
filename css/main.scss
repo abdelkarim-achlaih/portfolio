@@ -148,6 +148,7 @@ header {
 		a {
 			color: white;
 			transition: $duration;
+			text-transform: capitalize;
 
 			&:hover {
 				background-color: $main;

@@ -56,6 +56,8 @@ window.onresize = (_) => {
 
 projectsSetup();
 window.onload = (_) => {
+	window.contents = Array.from(document.querySelectorAll('[data-content=""]'));
+	setupLang();
 	contact();
 	setHeight(servicesPara);
 	setHeight(servicesTitle);
@@ -152,29 +154,10 @@ function hideFlag(flag) {
 	flag.classList.remove("show");
 }
 
-let contents = Array.from(document.querySelectorAll('[data-content=""]'));
-let tooglerLangs = Array.from(document.querySelectorAll(".dropdown-menu li"));
-let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
-
-dropToogle.innerHTML = tooglerLangs[1].innerHTML;
-
-let i = 0;
-contents.forEach((content) => {
-	document.body.dataset.lang = "fr";
-	content.innerHTML = frenchContent[i];
-	i++;
-});
-
-tooglerLangs[0].addEventListener("click", (e) => {
-	document.body.dataset.lang = "en";
-	writeContent(englishContent, e);
-});
-tooglerLangs[1].addEventListener("click", (e) => {
-	document.body.dataset.lang = "fr";
-	writeContent(frenchContent, e);
-});
-
-function writeContent(contentArray, e, first = false) {
+function writeContent(language, first = false) {
+	let contentArray = language === "en" ? englishContent : frenchContent;
+	document.body.dataset.lang = language;
+	window.localStorage.setItem("lang", language);
 	contents.forEach((content) => {
 		content.innerHTML = "";
 	});
@@ -188,7 +171,11 @@ function writeContent(contentArray, e, first = false) {
 				content.innerHTML = contentArray[i];
 				i++;
 			});
-			dropToogle.innerHTML = e.target.innerHTML;
+			let tmp = document.body.dataset.lang;
+			let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
+			dropToogle.innerHTML = `<img src="https://flagsapi.com/${
+				tmp === "en" ? "US" : "FR"
+			}/flat/16.png" alt="" class="me-1">${tmp}`;
 			heightAuto(servicesPara);
 			heightAuto(servicesTitle);
 			setHeight(servicesPara);
@@ -225,19 +212,39 @@ function removeLoader() {
 	});
 }
 
-const langTogs = document.querySelectorAll(".lang-tog");
-langTogs[0].addEventListener("click", (e) => {
-	document.body.dataset.lang = "en";
-	writeContent(englishContent, e, true);
-	document.querySelector(".page").classList.add("loaded");
-	document.querySelector(".lang-box").style.display = "none";
+/* ---------------------------------------- Lang Box Logic ------------------------------ */
+
+function setupLang() {
+	if (window.localStorage.getItem("lang")) {
+		document.querySelector(".lang-box").style.display = "none";
+		writeContent(window.localStorage.getItem("lang"), true);
+		document.querySelector(".page").classList.add("loaded");
+	} else {
+		const langTogs = document.querySelectorAll(".lang-tog");
+		document.querySelector(".lang-box").style.display = "flex";
+
+		langTogs[0].addEventListener("click", (e) => {
+			writeContent("en", true);
+			document.querySelector(".page").classList.add("loaded");
+			document.querySelector(".lang-box").style.display = "none";
+		});
+		langTogs[1].addEventListener("click", (e) => {
+			writeContent("fr", true);
+			document.querySelector(".page").classList.add("loaded");
+			document.querySelector(".lang-box").style.display = "none";
+		});
+	}
+}
+let tooglerLangs = Array.from(document.querySelectorAll(".dropdown-menu li"));
+
+tooglerLangs[0].addEventListener("click", (e) => {
+	writeContent("en");
 });
-langTogs[1].addEventListener("click", (e) => {
-	document.body.dataset.lang = "fr";
-	writeContent(frenchContent, e, true);
-	document.querySelector(".page").classList.add("loaded");
-	document.querySelector(".lang-box").style.display = "none";
+tooglerLangs[1].addEventListener("click", (e) => {
+	writeContent("fr");
 });
+/* ---------------------------------------- Projects Logic ------------------------------ */
+
 function projectsSetup() {
 	let projectsContainer = document.querySelector(".works .container .row");
 
@@ -283,14 +290,8 @@ function showPopup(e) {
 	popInfos.name.innerHTML = project.name;
 	popInfos.imgLink.src = `images/${project.imgLink}`;
 	popInfos.techs.innerHTML = project.techs.join(", ");
-
-	/* ------------------*/
-
 	popInfos.desc.innerHTML =
 		document.body.dataset.lang === "en" ? project.descEn : project.descFr;
-
-	/* ------------------*/
-
 	popInfos.demoLink.href = project.demoLink;
 	popInfos.codeLink.style.display = "block";
 	project.codeLink.length > 0
