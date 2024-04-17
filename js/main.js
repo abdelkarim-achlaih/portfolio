@@ -152,24 +152,27 @@ function hideFlag(flag) {
 	flag.classList.remove("show");
 }
 
-// let contents = Array.from(document.querySelectorAll('[data-content=""]'));
-// let tooglerLangs = Array.from(document.querySelectorAll(".dropdown-menu li"));
-// let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
+let contents = Array.from(document.querySelectorAll('[data-content=""]'));
+let tooglerLangs = Array.from(document.querySelectorAll(".dropdown-menu li"));
+let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
 
-// dropToogle.innerHTML = tooglerLangs[1].innerHTML;
+dropToogle.innerHTML = tooglerLangs[1].innerHTML;
 
-// let i = 0;
-// contents.forEach((content) => {
-// 	content.innerHTML = frenchContent[i];
-// 	i++;
-// });
+let i = 0;
+contents.forEach((content) => {
+	document.body.dataset.lang = "fr";
+	content.innerHTML = frenchContent[i];
+	i++;
+});
 
-// tooglerLangs[0].addEventListener("click", (e) => {
-// 	writeContent(englishContent, e);
-// });
-// tooglerLangs[1].addEventListener("click", (e) => {
-// 	writeContent(frenchContent, e);
-// });
+tooglerLangs[0].addEventListener("click", (e) => {
+	document.body.dataset.lang = "en";
+	writeContent(englishContent, e);
+});
+tooglerLangs[1].addEventListener("click", (e) => {
+	document.body.dataset.lang = "fr";
+	writeContent(frenchContent, e);
+});
 
 function writeContent(contentArray, e) {
 	contents.forEach((content) => {
@@ -231,7 +234,7 @@ function projectsSetup() {
 		div.innerHTML = `
 					<div class="work p-3 rounded-4 mb-5"" data-types= "${project.types}">
 						<div class="work-info mb-4 text-center">
-							<h3 class="fs-5 mb-3" data-content="">${project.name}</h3>
+							<h3 class="fs-5 mb-3">${project.name}</h3>
 							<div class="languages">${techsI}
 							</div>
 						</div>
@@ -263,7 +266,14 @@ function showPopup(e) {
 	popInfos.name.innerHTML = project.name;
 	popInfos.imgLink.src = `images/${project.imgLink}`;
 	popInfos.techs.innerHTML = project.techs.join(", ");
-	popInfos.desc.innerHTML = project.desc;
+
+	/* ------------------*/
+
+	popInfos.desc.innerHTML =
+		document.body.dataset.lang === "en" ? project.descEn : project.descFr;
+
+	/* ------------------*/
+
 	popInfos.demoLink.href = project.demoLink;
 	popInfos.codeLink.style.display = "block";
 	project.codeLink.length > 0
@@ -290,7 +300,7 @@ flrTogs.forEach((flrTog) => {
 			flrTog.classList.remove("active");
 		});
 		flrTog.classList.add("active");
-		let active = flrTog.innerHTML;
+		let active = flrTog.dataset.filtre;
 		let works = document.querySelectorAll(".works .work-holder");
 		works.forEach((work) => {
 			work.style.display = "block";
