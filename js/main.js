@@ -174,25 +174,29 @@ tooglerLangs[1].addEventListener("click", (e) => {
 	writeContent(frenchContent, e);
 });
 
-function writeContent(contentArray, e) {
+function writeContent(contentArray, e, first = false) {
 	contents.forEach((content) => {
 		content.innerHTML = "";
 	});
+	first ? "" : loader();
 	loader();
-	setTimeout(() => {
-		removeLoader();
-		let i = 0;
-		contents.forEach((content) => {
-			content.innerHTML = contentArray[i];
-			i++;
-		});
-		dropToogle.innerHTML = e.target.innerHTML;
-		heightAuto(servicesPara);
-		heightAuto(servicesTitle);
-		setHeight(servicesPara);
-		setHeight(servicesTitle);
-		tabHolderHeight(tabs);
-	}, 2000);
+	setTimeout(
+		() => {
+			first ? "" : removeLoader();
+			let i = 0;
+			contents.forEach((content) => {
+				content.innerHTML = contentArray[i];
+				i++;
+			});
+			dropToogle.innerHTML = e.target.innerHTML;
+			heightAuto(servicesPara);
+			heightAuto(servicesTitle);
+			setHeight(servicesPara);
+			setHeight(servicesTitle);
+			tabHolderHeight(tabs);
+		},
+		first ? 0 : 2000
+	);
 }
 
 function loader() {
@@ -221,6 +225,19 @@ function removeLoader() {
 	});
 }
 
+const langTogs = document.querySelectorAll(".lang-tog");
+langTogs[0].addEventListener("click", (e) => {
+	document.body.dataset.lang = "en";
+	writeContent(englishContent, e, true);
+	document.querySelector(".page").classList.add("loaded");
+	document.querySelector(".lang-box").style.display = "none";
+});
+langTogs[1].addEventListener("click", (e) => {
+	document.body.dataset.lang = "fr";
+	writeContent(frenchContent, e, true);
+	document.querySelector(".page").classList.add("loaded");
+	document.querySelector(".lang-box").style.display = "none";
+});
 function projectsSetup() {
 	let projectsContainer = document.querySelector(".works .container .row");
 

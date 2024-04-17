@@ -60,7 +60,7 @@ html.lenis {
   overflow-y: hidden;
   z-index: 1;
 }
-.page .loaded {
+.page.loaded {
   max-height: unset;
 }
 

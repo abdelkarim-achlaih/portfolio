@@ -71,7 +71,7 @@ html.lenis {
 	overflow-y: hidden;
 	z-index: 1;
 
-	.loaded {
+	&.loaded {
 		max-height: unset;
 	}
 }
