@@ -20,7 +20,8 @@ export let englishContent = [
 	"Hello! I'm Abdelkarim Achlaih",
 	"Every great development begins with a clear vision, meticulous planning, and a commitment to turning ideas into elegant, functional solutions.",
 	"My two years of experience as a full stack web developer empower me to craft tailored solutions that speak to your unique project requirements.",
-
+	"Technologies I Use",
+	"Discover the cutting-edge technologies fueling my journey towards digital excellence",
 	"Latest Works",
 	"Perfect solutions for digital experience",
 	"ALL",
@@ -97,6 +98,8 @@ export let frenchContent = [
 	"Bonjour ! Je suis Abdelkarim Achlaih",
 	"Tout grand projet de développement commence par une vision claire, une planification méticuleuse et un engagement à transformer les idées en solutions élégantes et fonctionnelles.",
 	"Mes deux années d'expérience en tant que développeur web full stack me permettent de concevoir des solutions sur mesure qui répondent aux exigences uniques de votre projet.",
+	"Technologies Que J'Utilise",
+	"Découvrez les technologies de pointe qui alimentent mon parcours vers l'excellence digitale",
 
 	"Derniers travaux",
 	"Des solutions parfaites pour l'expérience digitale",
