@@ -515,13 +515,28 @@ header {
 		padding-top: 10px;
 		padding-bottom: 10px;
 
+		@media (max-width: 991px) {
+			padding-left: 5px;
+			padding-right: 5px;
+			gap: 10px;
+		}
+
+		@media (max-width: 767px) {
+			justify-content: unset;
+			overflow-x: auto;
+			cursor: grab;
+		}
+
+
 		li {
+			user-select: none;
 			color: $main;
 			text-transform: uppercase;
 			font-size: 15px;
 			padding: 10px;
 			transition-duration: $duration;
 			cursor: pointer;
+			border-radius: 0.5rem;
 		}
 
 		.active,
@@ -687,17 +702,21 @@ header {
 	}
 
 	.popup-title {
-		max-height: 15vh;
+		// max-height: 15vh;
 	}
 
 	.popup-content {
 		overscroll-behavior: contain;
 		overflow-y: auto;
-		max-height: 75vh;
+		max-height: 80vh;
 
 		.skill {
 			color: $back1;
 			background-color: $main;
+		}
+
+		img {
+			max-width: 75%;
 		}
 
 		a {

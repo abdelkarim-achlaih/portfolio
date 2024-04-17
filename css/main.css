@@ -401,13 +401,31 @@ header .dropdown-menu a:hover {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+@media (max-width: 991px) {
+  .works .shuffle {
+    padding-left: 5px;
+    padding-right: 5px;
+    gap: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .works .shuffle {
+    justify-content: unset;
+    overflow-x: auto;
+    cursor: grab;
+  }
+}
 .works .shuffle li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   color: #64f4ac;
   text-transform: uppercase;
   font-size: 15px;
   padding: 10px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
 .works .shuffle .active,
 .works .shuffle li:hover {
@@ -539,17 +557,17 @@ header .dropdown-menu a:hover {
 .popup .popup-container .close-btn:hover svg {
   color: #64f4ac;
 }
-.popup .popup-title {
-  max-height: 15vh;
-}
 .popup .popup-content {
   overscroll-behavior: contain;
   overflow-y: auto;
-  max-height: 75vh;
+  max-height: 80vh;
 }
 .popup .popup-content .skill {
   color: #2d2e32;
   background-color: #64f4ac;
+}
+.popup .popup-content img {
+  max-width: 75%;
 }
 .popup .popup-content a {
   color: #64f4ac;
