@@ -57,8 +57,8 @@ export let englishContent = [
 
 	"Testimonials",
 	"What's my clients, friends say about me",
-	"We would like to express our heartfelt gratitude for your outstanding work in developing our official website at <a target='_blank' href='https://stara-immo.rf.gd/'>STARAIMMO</a>. Your dedication and expertise in creating our digital presence have greatly contributed to enhancing our online reach and showcasing our services effectively. Your commitment to excellence is truly commendable, and we are fortunate to have had you as part of our team. Thank you for your exceptional contributions.",
-	"One of the most impressive aspects of Abdelkarim's work is their commitment to creating solutions that are both aesthetically pleasing and highly functional. Their keen eye for design, coupled with their coding finesse, results in websites and web applications that not only look fantastic but also deliver exceptional user experiences. Abdelkarim understands that the digital landscape is as much about visual appeal as it is about performance, and they strike the perfect balance between the two.",
+	"We would like to express our heartfelt gratitude for your outstanding work in developing our official website at <a target='_blank' href='https://staraimmo.ma/'>STARAIMMO</a>. Your dedication and expertise in creating our digital presence have greatly contributed to enhancing our online reach and showcasing our services effectively.",
+	"One of the most impressive aspects of Abdelkarim's work is his commitment to creating solutions that are both aesthetically pleasing and highly functional.",
 
 	"Engineer, Friend",
 	"My Services",
@@ -155,8 +155,8 @@ export let frenchContent = [
 	"Profitez d'une performance élevée avec des sites web conçus pour la vitesse et l'efficacité. Mon engagement envers l'excellence s'étend à l'optimisation de chaque aspect de votre site web, garantissant des temps de chargement ultra-rapides et une expérience utilisateur fluide",
 	"Témoignages",
 	"Ce que mes clients et amis disent de moi",
-	"Nous tenons à vous exprimer notre sincère gratitude pour le travail remarquable que vous avez accompli en développant notre site web officiel à <a target='_blank' href='https://stara-immo.rf.gd/'>STARA IMMO</a>. Votre dévouement et votre expertise dans la création de notre présence numérique ont grandement contribué à améliorer notre portée en ligne et à mettre en valeur nos services de manière efficace. Votre engagement en faveur de l'excellence est vraiment louable, et nous avons la chance de vous compter parmi les membres de notre équipe. Nous vous remercions pour votre contribution exceptionnelle.",
-	"L'un des aspects les plus impressionnants du travail d'Abdelkarim est son engagement à créer des solutions à la fois esthétiques et hautement fonctionnelles. Leur sens aigu du design, associé à leur finesse de codage, se traduit par des sites et des applications web qui non seulement sont fantastiques, mais qui offrent également une expérience utilisateur exceptionnelle. Abdelkarim comprend que le paysage numérique est autant une question d'attrait visuel que de performance, et il trouve l'équilibre parfait entre les deux.",
+	"Nous tenons à vous exprimer notre sincère gratitude pour le travail remarquable que vous avez accompli en développant notre site web officiel à <a target='_blank' href='https://staraimmo.ma'>STARA IMMO</a>. Votre dévouement et votre expertise dans la création de notre présence numérique ont grandement contribué à améliorer notre portée en ligne et à mettre en valeur nos services de manière efficace.",
+	"L'un des aspects les plus impressionnants du travail d'Abdelkarim est son engagement à créer des solutions à la fois esthétiques et hautement fonctionnelles.",
 	"Ingénieur, Ami",
 	"Mes services",
 	"Des solutions innovantes qui laissent une impression durable à votre parcours numérique",
