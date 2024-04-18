@@ -172,6 +172,11 @@ function writeContent(language, first = false) {
 				i++;
 			});
 			let tmp = document.body.dataset.lang;
+			const projectsNames = document.querySelectorAll(".project-name");
+			projectsNames.forEach((projectName, i) => {
+				projectName.innerHTML =
+					tmp === "en" ? projects[i].nameEn : projects[i].nameFr;
+			});
 			let dropToogle = document.querySelector(".nav-link.dropdown-toggle");
 			dropToogle.innerHTML = `<img src="https://flagsapi.com/${
 				tmp === "en" ? "US" : "FR"
@@ -258,11 +263,17 @@ function projectsSetup() {
 		div.innerHTML = `
 					<div class="work p-3 rounded-4 mb-5"" data-types= "${project.types}">
 						<div class="work-info mb-4 text-center">
-							<h3 class="fs-5 mb-3">${project.name}</h3>
+							<h3 class="fs-5 mb-3 project-name">${
+								document.body.dataset.lang === "en"
+									? project.nameEn
+									: project.nameFr
+							}</h3>
 							<div class="languages">${techsI}
 							</div>
 						</div>
-						<div class="work-img rounded-4"><img src="images/${project.imgLink}" data-num="${index} alt="" class="img-fluid rounded-4"></div>
+						<div class="work-img rounded-4"><img src="images/${
+							project.imgLink
+						}" data-num="${index} alt="" class="img-fluid rounded-4"></div>
 					</div>
 		`;
 		// let imgConta = div.querySelector("work-img");
@@ -287,7 +298,8 @@ function showPopup(e) {
 	let ele = e.target;
 	let index = parseInt(ele.dataset.num);
 	let project = projects[index];
-	popInfos.name.innerHTML = project.name;
+	popInfos.name.innerHTML =
+		document.body.dataset.lang === "en" ? project.nameEn : project.nameFr;
 	popInfos.imgLink.src = `images/${project.imgLink}`;
 	popInfos.techs.innerHTML = project.techs.join(", ");
 	popInfos.desc.innerHTML =

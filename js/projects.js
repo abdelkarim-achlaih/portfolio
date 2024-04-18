@@ -1,11 +1,13 @@
 export let projects = [
 	{
-		name: "Roibeasts Real Estate",
+		nameEn: "Roibeasts Real Estate",
+		nameFr: "Roibeasts Immobilier",
 		techs: ["WordPress", "Elementor", "CSS", "JavaScript"],
 		imgLink: "Roibeasts.webp",
 		demoLink: "https://abdelkarim-achlaih.github.io/Currency_App/",
 		codeLink: ".",
-		descEn: "In these projects, I transformed given PSD designs into fully functional websites using HTML, CSS, and JavaScript. Some of them have an integrated API that fetches data in real time, in order to prevent page multiple reloadings. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
+		descEn:
+			"In these projects, I transformed given PSD designs into fully functional websites using HTML, CSS, and JavaScript. Some of them have an integrated API that fetches data in real time, in order to prevent page multiple reloadings. I meticulously coded and optimized the design to ensure it's responsive and accessible, providing a seamless user experience across various devices and browsers.",
 		descFr: "########################################",
 		types: ["Projects", "Blogs", "Real Estate"],
 	},
