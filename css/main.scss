@@ -809,7 +809,7 @@ header {
 	overflow: hidden;
 	background-image: url(../images/Arrow.svg);
 	background-size: 95%;
-	background-position-y: 230px;
+	background-position-y: 320px;
 	background-position-x: 2.5vw;
 	background-repeat: no-repeat;
 
@@ -883,19 +883,19 @@ header {
 			}
 
 
-			height: 200px;
+			min-height: 270px;
 			transition: transform .7s;
 			transform-style: preserve-3d;
 			transform-origin: center bottom;
 
 
 			div {
+				min-height: 270px;
 				background-color: $back1;
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				width: 100%;
-				height: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -904,7 +904,9 @@ header {
 				color: white;
 
 				svg {
-					font-size: 60px;
+					font-size: 40px;
+					margin-bottom: 20px;
+					color: $main;
 				}
 
 				h2 {
@@ -912,13 +914,15 @@ header {
 				}
 
 				h4 {
-					font-size: 16px;
+					font-size: 17px;
 					color: $main;
 				}
 
 				p {
-					font-size: 12px;
+					font-size: 11.5px;
 					text-align: center;
+					letter-spacing: 0;
+					word-spacing: -2.5px;
 				}
 			}
 
