@@ -51,6 +51,10 @@ export let englishContent = [
 	"Delivery",
 	"Delivery",
 	"Your satisfaction is my priority. I deliver the initial product and work closely with you to refine and enhance it based on your valuable feedback.",
+	"Developed with",
+	"Performance",
+	"Experience blazing-fast performance with websites crafted for speed and efficiency. My commitment to excellence extends to optimizing every aspect of your website, ensuring lightning-fast loading times and a seamless user experience",
+
 	"Testimonials",
 	"What's my clients, friends say about me",
 	"We would like to express our heartfelt gratitude for your outstanding work in developing our official website at <a target='_blank' href='https://stara-immo.rf.gd/'>STARAIMMO</a>. Your dedication and expertise in creating our digital presence have greatly contributed to enhancing our online reach and showcasing our services effectively. Your commitment to excellence is truly commendable, and we are fortunate to have had you as part of our team. Thank you for your exceptional contributions.",
@@ -146,7 +150,9 @@ export let frenchContent = [
 	"Livraison",
 	"Livraison",
 	"Votre satisfaction est ma priorité. Je livre le produit initial et travaille en étroite collaboration avec vous pour l'améliorer en fonction de vos précieux commentaires.",
-
+	"Développé avec",
+	"Performance",
+	"Profitez d'une performance élevée avec des sites web conçus pour la vitesse et l'efficacité. Mon engagement envers l'excellence s'étend à l'optimisation de chaque aspect de votre site web, garantissant des temps de chargement ultra-rapides et une expérience utilisateur fluide",
 	"Témoignages",
 	"Ce que mes clients et amis disent de moi",
 	"Nous tenons à vous exprimer notre sincère gratitude pour le travail remarquable que vous avez accompli en développant notre site web officiel à <a target='_blank' href='https://stara-immo.rf.gd/'>STARA IMMO</a>. Votre dévouement et votre expertise dans la création de notre présence numérique ont grandement contribué à améliorer notre portée en ligne et à mettre en valeur nos services de manière efficace. Votre engagement en faveur de l'excellence est vraiment louable, et nous avons la chance de vous compter parmi les membres de notre équipe. Nous vous remercions pour votre contribution exceptionnelle.",

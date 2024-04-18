@@ -758,7 +758,7 @@ header .dropdown-menu a:hover {
 .performance {
   background-color: #2d2e32;
 }
-.performance span {
+.performance span.green {
   color: #00c769;
 }
 
