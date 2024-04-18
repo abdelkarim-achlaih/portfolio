@@ -87,7 +87,7 @@ export let englishContent = [
 	"Name",
 	"Email",
 	"Message",
-	"© 2023, All Rights Reserved",
+	"© 2024, All Rights Reserved",
 	"Design inspired from  <a href='https://dribbble.com/shots/11276631-DS-Personal-Developer-Portfolio'>Logan Cee</a>",
 	"",
 	"",
@@ -183,6 +183,6 @@ export let frenchContent = [
 	"Nom",
 	"Email",
 	"Message",
-	"2023, tous droits réservés",
+	"2024, Tous droits réservés",
 	"Design inspiré de <a href='https://dribbble.com/shots/11276631-DS-Personal-Developer-Portfolio'>Logan Cee</a>",
 ];
