@@ -46,15 +46,18 @@ lis.forEach((li) => {
 let servicesPara = document.querySelectorAll(".services .service p");
 let servicesTitle = document.querySelectorAll(".services .service h4");
 
+projectsSetup();
+const projectsNames = document.querySelectorAll(".project-name");
 window.onresize = (_) => {
 	heightAuto(servicesPara);
 	heightAuto(servicesTitle);
 	setHeight(servicesPara);
 	setHeight(servicesTitle);
 	tabHolderHeight(tabs);
+	heightAuto(projectsNames);
+	setHeight(projectsNames);
 };
 
-projectsSetup();
 window.onload = (_) => {
 	window.contents = Array.from(document.querySelectorAll('[data-content=""]'));
 	setupLang();
@@ -62,6 +65,8 @@ window.onload = (_) => {
 	setHeight(servicesPara);
 	setHeight(servicesTitle);
 	tabHolderHeight(tabs);
+	heightAuto(projectsNames);
+	setHeight(projectsNames);
 };
 
 function heightAuto(array) {
@@ -172,7 +177,6 @@ function writeContent(language, first = false) {
 				i++;
 			});
 			let tmp = document.body.dataset.lang;
-			const projectsNames = document.querySelectorAll(".project-name");
 			projectsNames.forEach((projectName, i) => {
 				projectName.innerHTML =
 					tmp === "en" ? projects[i].nameEn : projects[i].nameFr;
@@ -186,6 +190,8 @@ function writeContent(language, first = false) {
 			setHeight(servicesPara);
 			setHeight(servicesTitle);
 			tabHolderHeight(tabs);
+			heightAuto(projectsNames);
+			setHeight(projectsNames);
 		},
 		first ? 0 : 2000
 	);
