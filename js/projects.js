@@ -1,5 +1,18 @@
 export let projects = [
 	{
+		nameEn: "M3ak Website",
+		nameFr: "Siteweb M3ak",
+		descEn:
+			"I was able to convert a highly detailed Figma design file into a working and responsive website. This project included the full implementation of the frontend for a complete website, comprising a blog system, home page, About Us page, Services page, and a Contact page.I utilized advanced CSS and Sass skills, such as mixins, to define design properties in a consistent and responsive approach across breakpoints to maximize development efficiency. I also utilized Bootstrap grid system, combined with its components to facilitate layout creation and JavaScript to enhance user interaction and experience. This project demonstrates my ability to implement design specifications into a website with a strong emphasis on efficiency, responsiveness, and alignment with current web development practices.",
+		descFr:
+			"J'ai réussi à convertir un fichier de design Figma très détaillé en un site web fonctionnel et réactif. Ce projet comprenait la mise en œuvre complète du frontend pour un site web complet, comprenant un système de blog, une page d'accueil, une page À propos de nous, une page Nos Services et une page de contact. J'ai utilisé des compétences avancées en CSS et Sass, telles que les mixins, pour définir les propriétés de design de manière cohérente et réactive à travers les points de rupture afin de maximiser l'efficacité du développement. J'ai également utilisé le système de grille de Bootstrap, combiné avec ses composants pour faciliter la création de la mise en page, et du JavaScript pour améliorer l'interaction et l'expérience utilisateur. Ce projet démontre ma capacité à mettre en œuvre des spécifications de design dans un site web en mettant fortement l'accent sur l'efficacité, la réactivité et l'alignement avec les pratiques actuelles de développement web.",
+		techs: ["HTML", "Sass", "Bootstrap", "JavaScript"],
+		imgLink: "M3ak.webp",
+		demoLink: "https://abdelkarim-achlaih.github.io/M3ak",
+		codeLink: "",
+		types: ["Projects", "Blogs", "Templates"],
+	},
+	{
 		nameEn: "Roibeasts Real Estate",
 		nameFr: "Roibeasts Immobilier",
 		descEn:
