@@ -79,8 +79,12 @@ html.lenis {
 }
 .lang-box .container {
   background-color: #25262a;
+  max-width: 350px;
 }
-@media (max-width: 400px) {
+@media (max-width: 620px) {
+  .lang-box .container {
+    width: 75% !important;
+  }
   .lang-box .container .row {
     flex-direction: column;
     justify-content: center;
@@ -94,6 +98,7 @@ html.lenis {
 .lang-box .lang-tog {
   cursor: pointer;
   transition: 0.4s;
+  border: 1px solid red;
 }
 .lang-box .lang-tog:hover {
   background-color: #00c769;
