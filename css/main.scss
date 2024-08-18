@@ -881,7 +881,7 @@ header {
 			gap: 20px;
 
 			.step-holder {
-				flex-basis: calc((100% - 2 * 20px) / 3);
+				flex-basis: calc((100% - 1 * 20px) / 2);
 
 			}
 		}
@@ -889,6 +889,7 @@ header {
 		@media (max-width: 767px) {
 			.step-holder {
 				flex-basis: calc((100% - 1 * 20px) / 2);
+				flex-basis: 100%;
 
 			}
 		}

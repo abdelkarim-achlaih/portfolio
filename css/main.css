@@ -708,12 +708,13 @@ header .dropdown-menu a:hover {
     gap: 20px;
   }
   .steps .steps-container .step-holder {
-    flex-basis: calc((100% - 40px) / 3);
+    flex-basis: calc((100% - 20px) / 2);
   }
 }
 @media (max-width: 767px) {
   .steps .steps-container .step-holder {
     flex-basis: calc((100% - 20px) / 2);
+    flex-basis: 100%;
   }
 }
 .steps .steps-container .step {
