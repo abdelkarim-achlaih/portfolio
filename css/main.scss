@@ -711,6 +711,7 @@ header {
 	transform: translateY(-50%);
 	z-index: 2000;
 
+
 	&.show {
 		display: block;
 	}
@@ -747,6 +748,11 @@ header {
 			align-items: center;
 			cursor: pointer;
 
+			@media (max-width: 576px) {
+				top: -10px;
+				right: 0px;
+			}
+
 			svg {
 				transition-duration: $duration;
 			}
@@ -773,8 +779,24 @@ header {
 			background-color: $main;
 		}
 
+		@media (max-width: 576px) {
+
+			.skills-container .skill {
+				font-size: 14px;
+			}
+
+			.description {
+				font-size: 12px;
+			}
+
+		}
+
 		img {
 			max-width: 75%;
+
+			@media (max-width: 576px) {
+				max-width: 100%;
+			}
 		}
 
 		a {
@@ -785,6 +807,7 @@ header {
 
 ::-webkit-scrollbar {
 	background-color: $back1;
+	width: 2px;
 }
 
 ::-webkit-scrollbar-thumb {

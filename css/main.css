@@ -602,6 +602,12 @@ header .dropdown-menu a:hover {
   align-items: center;
   cursor: pointer;
 }
+@media (max-width: 576px) {
+  .popup .popup-container .close-btn {
+    top: -10px;
+    right: 0px;
+  }
+}
 .popup .popup-container .close-btn svg {
   transition-duration: 0.4s;
 }
@@ -617,8 +623,21 @@ header .dropdown-menu a:hover {
   color: #2d2e32;
   background-color: #00c769;
 }
+@media (max-width: 576px) {
+  .popup .popup-content .skills-container .skill {
+    font-size: 14px;
+  }
+  .popup .popup-content .description {
+    font-size: 12px;
+  }
+}
 .popup .popup-content img {
   max-width: 75%;
+}
+@media (max-width: 576px) {
+  .popup .popup-content img {
+    max-width: 100%;
+  }
 }
 .popup .popup-content a {
   color: #00c769;
@@ -626,6 +645,7 @@ header .dropdown-menu a:hover {
 
 ::-webkit-scrollbar {
   background-color: #2d2e32;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
