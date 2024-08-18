@@ -98,7 +98,6 @@ html.lenis {
 .lang-box .lang-tog {
   cursor: pointer;
   transition: 0.4s;
-  border: 1px solid red;
 }
 .lang-box .lang-tog:hover {
   background-color: #00c769;
