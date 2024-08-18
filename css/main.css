@@ -80,6 +80,17 @@ html.lenis {
 .lang-box .container {
   background-color: #25262a;
 }
+@media (max-width: 400px) {
+  .lang-box .container .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  .lang-box .container .row div {
+    width: 132px;
+  }
+}
 .lang-box .lang-tog {
   cursor: pointer;
   transition: 0.4s;

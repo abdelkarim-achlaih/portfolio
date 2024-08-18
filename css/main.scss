@@ -91,6 +91,19 @@ html.lenis {
 
 	.container {
 		background-color: $back2;
+
+		@media (max-width:400px) {
+			.row {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 25px;
+
+				div {
+					width: 132px;
+				}
+			}
+		}
 	}
 
 	.lang-tog {
