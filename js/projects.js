@@ -1,5 +1,31 @@
 export let projects = [
 	{
+		nameEn: "Total List",
+		nameFr: "Total List",
+		descEn:
+			"I developed a high-performance e-commerce site using WordPress with WooCommerce for seamless shopping, Elementor for custom design, ACF for flexible content management, and RankMath for SEO optimization. This setup ensured an engaging, user-friendly, and fully optimized site tailored to meet both client and user needs.",
+		descFr:
+			"J'ai développé un site e-commerce haute performance en utilisant WordPress avec WooCommerce pour une expérience d'achat fluide, Elementor pour un design personnalisé, ACF pour une gestion de contenu flexible, et RankMath pour l'optimisation SEO. Ce montage garantit un site engageant, convivial et entièrement optimisé, conçu pour répondre aux besoins des clients et des utilisateurs.",
+		techs: ["WordPress", "Elementor"],
+		imgLink: "Total List.webp",
+		demoLink: "https://www.total-list.ma/",
+		codeLink: "",
+		types: ["Projects", "Stores"],
+	},
+	{
+		nameEn: "Restaurant El Azzam",
+		nameFr: "Restaurant El Azzam",
+		descEn:
+			"I developed a custom WordPress website for Restaurant Café El Azzam using WooCommerce for online orders and Elementor for a visually engaging design. With RankMath, I optimized SEO titles and meta descriptions, focusing on Essaouira’s fresh fish and Moroccan cuisine. The site offers seamless navigation through menu categories and enables easy online reservations and orders.",
+		descFr:
+			"J'ai développé un site WordPress personnalisé pour le Restaurant Café El Azzam, utilisant WooCommerce pour les commandes en ligne et Elementor pour un design visuel attractif. Avec RankMath, j'ai optimisé les titres SEO et les descriptions méta, en mettant l'accent sur les poissons frais et la cuisine marocaine d'Essaouira. Le site offre une navigation fluide à travers les catégories de menus et permet des réservations et commandes en ligne faciles.",
+		techs: ["WordPress", "Elementor"],
+		imgLink: "El Azzam.webp",
+		demoLink: "http://restaurant-elazzam.com/",
+		codeLink: "",
+		types: ["Projects", "Stores"],
+	},
+	{
 		nameEn: "M3ak Website",
 		nameFr: "Siteweb M3ak",
 		descEn:
@@ -115,7 +141,7 @@ export let projects = [
 			"Dans ce projet, j'ai commencé par la configuration complète d'une boutique WooCommerce, en configurant les catégories de produits, les attributs et les méthodes de paiement avec Stripe pour créer une plateforme d'e-com entièrement fonctionnelle. Mon objectif était de concevoir une boutique en ligne conviviale et visuellement attrayante, d'optimiser les annonces de produits, de mettre en œuvre un traitement sécurisé des transactions et d'intégrer des fonctionnalités essentielles d'e-com pour une expérience d'achat fluide.",
 		techs: ["WordPress", "Elementor"],
 		imgLink: "SuitedUp.webp",
-		demoLink: "http://suitedup.rf.gd/",
+		demoLink: "https://suitedup.webelevate.site/",
 		codeLink: "",
 		types: ["Demos", "Stores"],
 	},
