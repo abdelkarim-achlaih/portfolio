@@ -86,7 +86,7 @@ export let projects = [
 			"Création d'un thème WordPress personnalisé pour un site de blog personnel en utilisant HTML, CSS, JavaScript, Sass, Bootstrap, PHP et WordPress. Ce projet a débuté par l'installation d'un nouveau thème personnalisé, basé sur la boucle PHP fournie par WordPress, les pages, les articles et les sidebars, puis en modifiant leur apparence et leur réactivité sur tous les appareils en utilisant Bootstrap et Sass, et en utilisant du JavaScript pour résoudre les problèmes qui ne peuvent être gérés uniquement avec HTML et CSS.",
 		techs: ["WordPress", "JavaScript", "Sass", "Bootstrap"],
 		imgLink: "Nexus Blog.webp",
-		demoLink: "http://myblog.abdelkarim.rf.gd/",
+		demoLink: "http://nexus.webelevate.site/",
 		codeLink: "",
 		types: ["Demos", "Blogs"],
 	},
